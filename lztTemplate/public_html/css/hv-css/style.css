@@ -1,0 +1,274 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 29, 2015, 9:48:24 AM
+    Author     : vanhai
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,vietnamese);
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(32, 32, 32, 0.8);
+}
+.top{
+    width: 100%
+}
+.container{
+    background: white; 
+    padding-bottom: 10px;
+    -webkit-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+ul{
+    list-style: none; 
+}
+.ul-translate{
+    float: right;
+    margin-bottom: 0px;
+}
+.ul-translate>li>a>img{
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+.ul-translate>li{
+    float: right;
+    padding: 5px 5px 0 5px;
+}
+.logocpn{
+    height: 74px;
+}
+.ul-sub-menu{
+    margin-bottom: auto;
+    position: relative;
+    margin-right: 0px;
+    float: right;
+    padding: 5px 0 5px 5px;
+    margin-top: 30px;
+
+}
+.ul-sub-menu>li{
+    float: left;
+
+}
+a{
+    color: black;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: none;
+}
+.div-temp{
+    width: 100%;
+    position: relative;
+    height: 50px;
+}
+.li-dropdown:hover > .sub-menu{
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    width: 150px;
+    height: auto;
+    display: block;
+}
+.sub-menu{
+    position: absolute;
+    -webkit-transition: width 2s, height 4s; /* Safari */
+    transition: width 2s, height 4s;
+    display: none;
+    padding-left: 0;
+}
+.sub-menu>li{
+    float: none;
+    text-align: left;
+    padding: 8px;
+    background-color: rgb(238, 238, 238);
+    box-shadow: rgb(255, 255, 255) 0px 1px 0px 0px inset, rgb(212, 212, 212) 0px -1px 0px 0px inset;
+    font-size: small
+}
+
+.sub-menu>li:hover>a{
+    color: black;
+    font-weight: bold
+}
+.sub-menu>li:hover{
+    border-bottom: 2px solid rgb(17, 158, 231);;
+}
+.sub-menu>li>a{
+    color: rgb(110, 110, 110);
+    text-shadow: rgba(255, 255, 255, 0.298039) 0px -1px 0px;
+    font-weight: 200
+}
+.ul-sub-menu>li{
+    text-align: right;
+
+}
+.li-sub-menu{
+    float:right;
+    width: auto;
+    height: auto;
+    padding-right:15px;
+}
+.img-logo>img{
+    height: 80px;
+}
+.li-last{
+    padding-right: 0px;
+}
+@media (max-width: 770px) {
+    .img-logo{
+        text-align: center;
+    }
+    .ul-sub-menu{
+        padding: 0;
+        width: 100%;
+    }
+    .ul-sub-menu>li{
+        width: 100%;
+        display: block;
+        text-align: center;
+        background: #269abc;
+        border: 2px solid white;
+        color: white;
+    }
+    .ul-sub-menu>li>a{
+        color: white;
+    }
+    .ul-translate{
+        display: none;
+    }
+    #slide{
+        display: none;
+    }
+    .li-dropdown:hover>.sub-menu{
+        width: 100%;
+    }
+
+}
+.top-bar{
+
+
+}
+
+/* slide top */
+
+#slide {
+    max-width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin: 10px auto;
+    width: auto;
+
+}
+
+#slide .div-img-slide {
+    display: block;
+    width: 0;
+    float: left;
+    -webkit-transition: all 0.75s;
+    -moz-transition: all 0.75s;
+    -o-transition: all 0.75s;
+    transition: all 0.75s;
+}
+
+.div-img-slide > img {
+    width: 100%;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    padding: 0 10px;
+    width: auto;
+    height: 350px;
+    background: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    font-size: 26px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+button.prev:hover,
+button.next:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+button.next {
+    position: absolute;
+    margin-left: 935px;
+
+}
+/*menu top*/
+.menu-box{
+    border-right: 1px solid #cccccc
+}
+.col-xs-6>h4{
+    font-size: 14px;
+    font-weight: bolder
+}
+.footer{
+    background-color:#1F3B4F;
+    color: white;
+}
+#namecompany{
+    padding-top:15px
+}
+.footer>img{
+    height: 100px; 
+    width: auto; 
+    float: right; 
+    padding-right: 10px;
+}
+
+.content-thumb{
+    width: 100%; 
+    height: auto; 
+    overflow: hidden
+}
+.img-thumb{
+    width: 100%; 
+    height: 150px; 
+    overflow: hidden
+}
+.content-thumb>a{
+    font-weight: bold;
+    font-size: small;
+}
+.menu-box:hover>h4, .menu-box-last:hover>h4{
+  background-color: rgba(17, 158, 231, 0.7);  
+  color: white
+}
+.menu-box>h4, .menu-box-last>h4{
+    padding: 5px
+}
+.news-other{
+    width: 100%;
+    height: auto;
+}
+.news-other>p>a, p{
+    width: 100%;
+    font-weight: 400;
+    font-size: small
+}
+.news-other>p{
+    width: 100%;
+    font-weight: normal;
+    padding-bottom: 5px;
+    border-bottom: 1px #cccccc dotted;
+}
+.news-other>p>a:hover{
+    font-weight: bold;
+    color: #3366ff
+}
+
+
+
+
+
+/*dfadf*/
+
