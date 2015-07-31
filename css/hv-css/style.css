@@ -11,12 +11,15 @@ and open the template in the editor.
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: rgba(32, 32, 32, 0.8);
+    background-color: white;
+    background-image: url(http://otakumode.com/images/common/bg.png);
 }
 .top{
-    width: 100%
+    width: 100%;
+
 }
 .container{
-    background: white; 
+    background: rgba(229, 229, 229, 0.8); 
     padding-bottom: 10px;
     -webkit-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
@@ -29,6 +32,7 @@ ul{
 .ul-translate{
     float: right;
     margin-bottom: 0px;
+    padding-bottom: 5px;
 }
 .ul-translate>li>a>img{
     width: 20px;
@@ -49,6 +53,14 @@ ul{
     float: right;
     padding: 5px 0 5px 5px;
     margin-top: 30px;
+
+}
+.top>.container{
+    padding-bottom: 0px;
+    border-bottom: 3px solid #cccccc;
+}
+.top-bar{
+    background-color: white;
 
 }
 .ul-sub-menu>li{
@@ -79,6 +91,7 @@ a:hover{
     transition: width 2s, height 4s;
     display: none;
     padding-left: 0;
+    z-index: 10;
 }
 .sub-menu>li{
     float: none;
@@ -154,10 +167,6 @@ a:hover{
     }
 
 }
-.top-bar{
-
-
-}
 
 /* slide top */
 
@@ -169,7 +178,14 @@ a:hover{
     width: auto;
 
 }
-
+.img-thumb>img{
+    width: 100%; height: auto
+}
+.ftdoitac{
+    padding: 15px; 
+   // border-top: 2px solid #cccccc;
+    background-color: white;
+}
 #slide .div-img-slide {
     display: block;
     width: 0;
@@ -211,13 +227,7 @@ button.next {
 
 }
 /*menu top*/
-.menu-box{
-    border-right: 1px solid #cccccc
-}
-.col-xs-6>h4{
-    font-size: 14px;
-    font-weight: bolder
-}
+
 .footer{
     background-color:#1F3B4F;
     color: white;
@@ -246,12 +256,29 @@ button.next {
     font-weight: bold;
     font-size: small;
 }
-.menu-box:hover>h4, .menu-box-last:hover>h4{
-  background-color: rgba(17, 158, 231, 0.7);  
-  color: white
+.index-content{
+    padding: 5px 25px 10px 10px;
+
 }
-.menu-box>h4, .menu-box-last>h4{
-    padding: 5px
+.index-content> .col-xs-6,.index-content> .col-sm-4{
+    padding-left: 15px;
+    padding-right: 0px;
+    margin-top: 5px;
+}
+.menu-box{
+    background-color: white;
+    width: 100%;
+    padding: 2px 10px 10px 10px;
+    
+}
+.menu-box:hover>h4{
+    background-color: rgba(17, 158, 231, 0.7);  
+    color: white
+}
+.menu-box>h4{
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bolder
 }
 .news-other{
     width: 100%;
