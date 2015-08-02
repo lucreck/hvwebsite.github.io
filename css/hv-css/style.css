@@ -20,7 +20,6 @@ body{
 .top{
     width: 100%;
     background-color: black;
-    overflow: hidden;
 }
 #partner-container{
     background-color: rgb(247, 247, 249);
@@ -34,7 +33,7 @@ body{
 }
 #service-container{
     position: relative;
-    background-color: rgb(0, 187, 166);
+    background-color: rgb(12, 27, 48);
     background-image: radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
 }
 #service-container, #footer-container, #partner-container, #product-container{
@@ -46,7 +45,7 @@ body{
     display: block;
     width: 0;
     height: 0;
-    border-top: 28px solid rgb(0, 187, 166);
+    border-top: 28px solid rgb(12, 27, 48);
     border-left: 27px solid transparent;
     border-right: 28px solid transparent;
     bottom: -28px;
@@ -91,7 +90,9 @@ body{
     padding-bottom: 0;
 }
 .top-bar{
-    background-color: rgb(0, 187, 166);
+    background-color: rgb(12, 27, 48);
+    margin-left: 0;
+    margin-right: 0px;
 }
 .logocpn{
     height: 74px;
@@ -167,7 +168,7 @@ ul{
     background-color: black;
 }
 .ul-sub-menu>li:hover >a{
-    color: rgba(255,255,255,0.8);
+    color: white;
 }
 
 
@@ -188,7 +189,7 @@ ul{
 .sub-menu>li{
     float: none;
     text-align: left;
-    padding: 8px;
+    padding: 0px 8px 0px 8px;
     background-color: rgb(51, 51, 51);
     font-size: small
 }
@@ -214,7 +215,7 @@ ul{
     max-height: 190px;
     min-width: 150px;
     width: 18.9%;
-    background-color:rgb(0, 187, 166); 
+    background-color:rgb(12, 27, 48); 
     float: left;   
     margin: 5px;
     text-align: center;
@@ -309,7 +310,7 @@ ul{
     padding-bottom: 40px;
 }
 .ftdoitac > h4{
-    color: rgb(0, 187, 166);
+    color: rgb(12, 27, 48);
     text-transform: uppercase;
     font-size: 25px;
     text-align: center;
@@ -408,7 +409,7 @@ button.next {
     font-size: 20px;
     width: 50%;
     position: absolute;
-    color: rgb(0, 187, 166);
+    color: rgb(12, 27, 48);
     text-transform: uppercase
 }
 .title-service h4{
@@ -458,7 +459,7 @@ button.next {
 }
 
 .crsl-items h5>a{
-    color: rgb(0, 187, 166);
+    color: rgb(12, 27, 48);
     font-size: 16px;
     text-transform: uppercase
 }
@@ -504,13 +505,13 @@ button.next {
     text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
     font-size: 1.2em;
     font-weight: bold;
-    background: rgb(0, 187, 166);
+    background: rgb(12, 27, 48);
 }
 
 .crsl-item p.readmore a {
     display: block;
     float: right;
-    color: rgb(0, 187, 166);
+    color: rgb(12, 27, 48);
     padding: 3px 5px;
     text-decoration: none;
     -webkit-border-radius: 3px;
@@ -518,7 +519,7 @@ button.next {
     border-radius: 4px;
 }
 .crsl-item p.readmore a:hover {
-    background: rgb(0, 187, 166);
+    background: rgb(12, 27, 48);
     color: #fff;
     border-radius: 0;
 
@@ -543,7 +544,7 @@ button.next {
     padding: 5px 8px;
     margin-right: 8px;
     font-size: 20px;
-    color: rgb(0, 187, 166);
+    color: rgb(12, 27, 48);
     text-decoration: none;
 
 }
@@ -554,11 +555,11 @@ button.next {
 }
 .slidernav a:hover{
     color: white;
-    background-color: rgb(0, 187, 166);
+    background-color: rgb(12, 27, 48);
 }
 
 .product-list:hover> .navbutton .slidernav a{
-    background-color: rgb(0, 187, 166);
+    background-color: rgb(12, 27, 48);
     color: white;
 }
 .product-list{
@@ -570,17 +571,17 @@ button.next {
     overflow: hidden;
     background-color: white;
     margin: 10px;
-    color: rgb(0, 187, 166);
+    color: rgb(12, 27, 48);
     margin-top: 30px;
 }
 .mul-item h3 a{
     text-transform: uppercase;
     font-size: 18px;
-    color: rgb(0, 187, 166);
+    color: rgb(12, 27, 48);
     font-weight: normal;
 }
 .mul-item a{
-    color: rgb(0, 187, 166);
+    color: rgb(12, 27, 48);
 }
 .mul-item h3,p{
     padding:10px;
@@ -598,7 +599,7 @@ button.next {
     font-size: 13px;
 }
 .mul-item-rm:hover{
-    background-color: rgb(0, 187, 166);
+    background-color: rgb(12, 27, 48);
     color: white;
 }
 .mul-item img{

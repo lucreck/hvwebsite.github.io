@@ -64,3 +64,8 @@ $('.multiple-items').slick({
     slidesToShow: 3,
     slidesToScroll: 3
 });
+$('.multiple-items2').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+});
