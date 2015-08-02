@@ -19,14 +19,72 @@ body{
 }
 .top{
     width: 100%;
-
+    background-color: black;
+    overflow: hidden;
 }
-.container{
-    background: rgba(229, 229, 229, 0.8); 
-    padding-bottom: 10px;
-    -webkit-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+#partner-container{
+    background-color: rgb(247, 247, 249);
+}
+#footer-container{
+    background-color: black;
+}
+#product-container{
+    background-color: rgb(247, 247, 249);
+    position: relative
+}
+#service-container{
+    position: relative;
+    background-color: rgb(0, 187, 166);
+    background-image: radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+}
+#service-container, #footer-container, #partner-container, #product-container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#service-container:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 28px solid rgb(0, 187, 166);
+    border-left: 27px solid transparent;
+    border-right: 28px solid transparent;
+    bottom: -28px;
+    left: 50%;
+    margin-left: -28px;
+    position: absolute;
+    z-index: 1115;
+}
+#product-container:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 28px solid rgb(247, 247, 249);
+    border-left: 27px solid transparent;
+    border-right: 28px solid transparent;
+    bottom: -28px;
+    left: 50%;
+    margin-left: -28px;
+    position: absolute;
+    z-index: 1115;
+}
+#news-container{
+    position: relative;
+}
+#news-container:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 28px solid rgb(51, 51, 51);
+    border-left: 27px solid transparent;
+    border-right: 28px solid transparent;
+    bottom: -28px;
+    left: 50%;
+    margin-left: -28px;
+    position: absolute;
+    z-index: 1115;
 }
 .top>.container{
     background-color: #3ab4a6;
@@ -48,6 +106,7 @@ a:hover{
 .trans{
     background-color: rgb(0, 0, 0);
     padding: 17px;
+
 }
 .div-temp{
     width: 100%;
@@ -57,7 +116,6 @@ a:hover{
 
 .img-logo>img{
     height: 50px;
-    display: none;
 }
 .img-logo{
     position: absolute
@@ -168,8 +226,7 @@ ul{
     font-size: 80px;
 }
 .service-box a{
-    color: white
-}
+    color: white;}
 .service-box:hover{
     background-color:black;
 }
@@ -186,11 +243,9 @@ ul{
 
 }
 .list-services{
-    background-color: rgb(0, 187, 166);
-    padding-left: 0;
+    padding-left: 7px;
     padding-right: 0;
     padding-bottom: 30px;
-    background-image: radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
 }
 @media (max-width: 770px) {
     .img-logo{
@@ -232,7 +287,7 @@ ul{
         width: 50%;
     }
     .service-box{
-        width: 200px;
+        width:  95.5%;
     }
 }
 
@@ -243,15 +298,15 @@ ul{
     height: 350px;
     overflow: hidden;
     margin: 10px auto;
-    width: auto;
-
+    width: 100%;
 }
 .img-thumb>img{
     width: 100%; height: auto
 }
 .ftdoitac{
     padding: 15px; 
-    background-color: rgb(240, 240, 244);
+    padding-top: 10px;
+    padding-bottom: 40px;
 }
 .ftdoitac > h4{
     color: rgb(0, 187, 166);
@@ -272,7 +327,6 @@ ul{
 .div-img-slide > img {
     width: 100%;
 }
-
 button.prev,
 button.next {
     position: absolute;
@@ -335,10 +389,7 @@ button.next {
     padding-right: 0px;
     margin-top: 5px;
 }
-.index-content{
 
-    margin: 0;
-}
 .menu-box{
     background-color:rgb(247, 247, 249);
     width: 100%;
@@ -374,7 +425,6 @@ button.next {
     height: 40px;
 }
 .title-service{
-    background-color: rgb(0, 187, 166);
     color: white;
     height: 40px;
 }
@@ -514,5 +564,43 @@ button.next {
 .product-list{
     padding: 0;
 }
-
-
+.mul-item{
+    width: 180px;
+    height: 300px;
+    overflow: hidden;
+    background-color: white;
+    margin: 10px;
+    color: rgb(0, 187, 166);
+    margin-top: 30px;
+}
+.mul-item h3 a{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: rgb(0, 187, 166);
+    font-weight: normal;
+}
+.mul-item a{
+    color: rgb(0, 187, 166);
+}
+.mul-item h3,p{
+    padding:10px;
+}
+.mul-item p{
+    color: rgb(143, 143, 143);
+    padding-top: 0px;
+    font-size: 14px;
+}
+.mul-item-rm{
+    font-weight: 100;
+    text-align: right;
+    padding: 10px;
+    float: right;
+    font-size: 13px;
+}
+.mul-item-rm:hover{
+    background-color: rgb(0, 187, 166);
+    color: white;
+}
+.mul-item img{
+    width: 100%;
+}

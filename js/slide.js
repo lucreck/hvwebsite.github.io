@@ -33,19 +33,34 @@ function back_slide(i) {
     }
 }
 
+$(function () {
+    $('.crsl-items').carousel({
+        visible: 3,
+        itemMinWidth: 180,
+        itemEqualHeight: 370,
+        itemMargin: 9,
+    });
 
+    $("a[href=#]").on('click', function (e) {
+        e.preventDefault();
+    });
+});
+$(function () {
 
+    $('#da-slider').cslider({
+        autoplay: true, // auto play slider on load
+        bgincrement: 450
+    });
 
-$(function(){
-  $('.crsl-items').carousel({
-    visible: 3,
-    itemMinWidth: 180,
-    itemEqualHeight: 370,
-    itemMargin: 9,
-  });
-   
-  $("a[href=#]").on('click', function(e) {
-    e.preventDefault();
-  });
 });
 
+
+$('#theCarousel').carousel({
+    interval: false
+})
+
+$('.multiple-items').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+});
