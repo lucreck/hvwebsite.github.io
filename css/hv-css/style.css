@@ -22,8 +22,9 @@ body{
     background-color: black;
 }
 #partner-container{
-    background-color: rgb(247, 247, 249);
+    background-color: #393939;
 }
+
 #footer-container{
     background-color: black;
 }
@@ -34,7 +35,7 @@ body{
 #service-container{
     position: relative;
     background-color: rgb(12, 27, 48);
-    background-image: radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+    //background-image: radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
 }
 #service-container, #footer-container, #partner-container, #product-container{
     padding-top: 50px;
@@ -49,7 +50,7 @@ body{
     border-left: 27px solid transparent;
     border-right: 28px solid transparent;
     bottom: -28px;
-    left: 50%;
+    left: 51%;
     margin-left: -28px;
     position: absolute;
     z-index: 1115;
@@ -63,20 +64,22 @@ body{
     border-left: 27px solid transparent;
     border-right: 28px solid transparent;
     bottom: -28px;
-    left: 50%;
+    left: 51%;
     margin-left: -28px;
     position: absolute;
     z-index: 1115;
 }
 #news-container{
     position: relative;
+    padding-top: 50px;
+    background-color: rgb(247, 247, 249);
 }
 #news-container:after{
     content: "";
     display: block;
     width: 0;
     height: 0;
-    border-top: 28px solid rgb(51, 51, 51);
+    border-top: 28px solid rgb(247, 247, 249);
     border-left: 27px solid transparent;
     border-right: 28px solid transparent;
     bottom: -28px;
@@ -190,7 +193,7 @@ ul{
     float: none;
     text-align: left;
     padding: 0px 8px 0px 8px;
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(12, 27, 48);
     font-size: small
 }
 
@@ -215,11 +218,10 @@ ul{
     max-height: 190px;
     min-width: 150px;
     width: 18.9%;
-    background-color:rgb(12, 27, 48); 
+    background-color:rgb(247, 247, 249);
     float: left;   
     margin: 5px;
     text-align: center;
-    color: white;
     padding: 25px;
     display: inline-block;
 }
@@ -227,27 +229,36 @@ ul{
     font-size: 80px;
 }
 .service-box a{
-    color: white;}
-.service-box:hover{
-    background-color:black;
+    color: rgba(12, 27, 48,0.7);
 }
+.service-box:hover{
+    //background-color:rgb(0, 187, 166);
+}
+.service-box:hover >a{
+    color: rgb(12, 27, 48);
+}
+
 .content-service{
     text-align: center;
     padding: 0;
 }
 .title-service{
     margin-bottom: 20px;
+
+}
+.title-service2 h4{
+    color: white;
 }
 .content-service service-box{
     text-align: center;
     margin: auto;
-
 }
 .list-services{
     padding-left: 7px;
     padding-right: 0;
     padding-bottom: 30px;
 }
+
 @media (max-width: 770px) {
     .img-logo{
         text-align: center;
@@ -310,10 +321,11 @@ ul{
     padding-bottom: 40px;
 }
 .ftdoitac > h4{
-    color: rgb(12, 27, 48);
+    color: white;
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
+    padding-bottom: 30px;
 }
 #slide .div-img-slide {
     display: block;
@@ -414,11 +426,12 @@ button.next {
 }
 .title-service h4{
     padding: 3px;
-    font-size: 20px;
-    width: 50%;
+    font-size: 30px;
+    width: 100%;
     position: absolute;
-    color: white;
-    text-transform: uppercase
+    color: rgb(12, 27, 48);
+    text-transform: uppercase;
+    text-align: center
 }
 .navbutton{
     background-color: rgb(247, 247, 249);
@@ -574,13 +587,13 @@ button.next {
     color: rgb(12, 27, 48);
     margin-top: 30px;
 }
-.mul-item h3 a{
+.mul-item h3>a{
     text-transform: uppercase;
     font-size: 18px;
     color: rgb(12, 27, 48);
     font-weight: normal;
 }
-.mul-item a{
+.mul-item>a{
     color: rgb(12, 27, 48);
 }
 .mul-item h3,p{
@@ -613,12 +626,14 @@ button.next {
     padding-left: 22px;
     padding-right: 22px;
     padding-bottom: 20px;
+
 }
-.hast-tag-div>a{
-    padding-right: 3px;
-    color: white;
-    text-transform: uppercase;
-    font-size: 12px;
+.hast-tag-lc{
+    background-color: rgb(0, 187, 166);
     padding: 3px;
-    background-color: rgb(0, 187, 166)
+    color: white;
+    font-size: 12px;
+}
+.menu-box{
+    background-color: transparent;
 }
