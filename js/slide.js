@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 var on = true;
 var myVar = setInterval(function () {
     if (on) {
@@ -51,9 +50,14 @@ $(function () {
         autoplay: true, // auto play slider on load
         bgincrement: 450
     });
-
 });
-
+$(function () {
+    setTimeout(function () {
+        $('#preload').fadeOut(1000, 'swing', function () {
+            $('#preload').remove();
+        });
+    }, 1000);
+});
 
 $('#theCarousel').carousel({
     interval: false
@@ -79,27 +83,64 @@ $('.autoplay').slick({
 });
 
 $('.center').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }
+    ]
+});
+var $topmenu = $('#top-menu');
+$topmenu.waypoint(function (direction) {
+    if (direction === 'down') {
+        $('#top-menu').addClass('on-top-menu');
+    } else {
+        $('#top-menu').removeClass('on-top-menu');
     }
-  ]
+});
+
+var $slickslide = $('#product-animation-index');
+$slickslide.waypoint(function () {
+    setTimeout(function () {
+        $('#product-animation-index').css(
+                {"opacity": "1"
+                }
+        );
+    }, 1500);
+
+}, {
+    offset: '90%'
+});
+var $slickslide = $('#service-animation-index');
+$slickslide.waypoint(function (direction) {
+    if (direction === 'down') {
+        $('#service-animation-index').css(
+                {"opacity": "1"
+                }
+        );
+    } else {
+        $('#service-animation-index').css(
+                {"opacity": "0"
+                }
+        );
+    }
+}, {
+    offset: '95%'
 });

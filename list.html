@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Hung Vuong Company</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+        <link href="css/hv-css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="slick/slick.css" rel="stylesheet" type="text/css"/>
+        <link href="css/als_style.css" rel="stylesheet" type="text/css"/>
+        <link href="dreamcodes/sliders/css/tsc_parallax.css" rel="stylesheet" type="text/css"/>
+        <link href="slick/slick-theme.css" rel="stylesheet" type="text/css"/>
+        <script src="js/smoove-master/jquery.smoove.min.js" type="text/javascript"></script>
+    </head>
+    <body >
+        <div class="top">
+            <div class="container" >
+                <div class="row slide" style="display:none">
+                    <section id="slide" style="margin:0;">
+                        <button onclick="back_slide(true)" class="prev">&#171;</button>
+                        <button onclick="slides(true)" class="next">&#187;</button>
+                        <div class="div-img-slide">
+                            <a href="#"><img src="images/slide/top slide/img1.jpg" alt=""/></a>
+                        </div>
+                        <div class="div-img-slide">
+                            <a href="#"><img src="images/slide/top slide/img2.jpg" alt=""/></a>
+                        </div>
+                        <div class="div-img-slide">
+                            <a href="#"><img src="images/slide/top slide/img3.jpg" alt=""/></a>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+            <div class="tsc_clear"></div> <!-- line break/clear line -->
+            <div class="row top-bar" >
+                <div class="div-temp" id="top-menu">
+                    <ul class="ul-sub-menu">
+                        <li class="li-sub-menu"><a href="#">Trang Chủ</a></li>
+                        <li class="li-sub-menu  li-dropdown"><a href="#">Giới Thiệu <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="li-sub-menu"><a href="#">Công Ty</a></li>
+                                <li class="li-sub-menu"><a href="#">Ban Quản Trị</a></li>
+                            </ul></li>
+                        <li class="li-sub-menu li-dropdown">
+                            <a href="#">Sản Phẩm
+                                <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="li-sub-menu"><a href="#">Linh Kiện</a></li>
+                                <li class="li-sub-menu"><a href="#">Phụ Kiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="li-sub-menu"><a href="#">Dịch Vụ</a></li>
+                        <li class="li-sub-menu"><a href="#">Đối Tác</a></li>
+                        <li class="li-sub-menu li-last"><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="background-color: rgb(35, 51, 75);">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 list-product">
+                        <div class="row title-service" id="header-list-product">
+                            <ul class="col-md-12" style="padding-right: 54px;">
+                                <li>
+                                    <p>Danh mục sản phẩm</p>
+                                </li>
+                                <li>
+                                    <select class="form-control" id="selectCategoryProduct">
+                                        <option value="">Default select</option>
+                                        <option value="">Default select</option>
+                                        <option value="">Default select</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <p>Dịch vụ kèm theo</p>
+                                </li>
+                                <li>
+                                    <select class="form-control" id="selectCategoryProduct">
+                                        <option value="">Default select</option>
+                                        <option value="">Default select</option>
+                                        <option value="">Default select</option>
+                                    </select>
+                                </li>
+                                <li style="float:right">
+                                    <input class="form-control" type="text" placeholder="tên sản phẩm...">
+                                </li>
+                                <li style="float:right">
+                                    <p>tìm kiếm</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="col-md-12" style="padding:0; margin-top: 120px;">
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-md-3 item-product">
+                            <div class="col-md-12 thumb-img-product">
+                                <div class="col-md-12 thumb-title-link">
+                                    <a href="/detail.html"><span class="glyphicon glyphicon-link"></span></a>
+                                </div>
+                                <a href="#">
+                                    <img class="col-md-12" src="images/slide/top slide/img1.jpg" alt=""/>
+                                </a>  
+                            </div>
+                            <div class="col-md-12 thumb-item-product-content">
+                                <a href="#"><p class="thumb-title-product">Chip A5</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid"  id="footer-container">
+            <div class="container">
+                <div class="row footer">
+                    <div class="col-md-9">
+                        <h5 id="namecompany">Công ty cổ phần công nghệ thương mại Hưng Vượng</h5>
+                        <h5>Địa Chỉ: 683 Hoàng Hoa Thám, phường Vĩnh Phúc, quận Ba Đình, TP HN</h5>
+                        <h5>Hotline: (043) 000-0000  - Email: info@hvtec.vn</h5>
+                    </div>
+                    <img src="images/fwdlogo/Logo_RB.png" alt=""/>
+                    <div class="col-md-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/jquery-migrate-1.2.1.js" type="text/javascript"></script>
+        <script src="js/responsiveCarousel.min.js" type="text/javascript"></script>
+        <script src="dreamcodes/sliders/js/parallax/jquery.cslider.js" type="text/javascript"></script>
+        <script src="dreamcodes/sliders/js/parallax/modernizr.custom.js" type="text/javascript"></script>
+        <script src="js/jquery.als-1.7.min/jquery.als-1.7.js" type="text/javascript"></script>
+        <script src="slick/slick.js" type="text/javascript"></script>
+        <script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
+        <script src="js/noframework.waypoints.min.js" type="text/javascript"></script>
+        <script src="js/slide.js" type="text/javascript"></script>
+    </body>
+    <style>
+
+    </style>
+</html>
