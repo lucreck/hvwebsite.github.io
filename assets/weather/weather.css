@@ -1,0 +1,195 @@
+
+
+input:active {outline:none;}
+top input{
+    color: black;
+    margin-bottom: 5px;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+#results {
+  padding: 5px 10px;
+}
+
+#results .restext, #results p {margin: 0;}
+#results ul{list-style: none; padding: 0; margin: 5px 0;}
+
+#results ul li {
+  padding: 10px 10px;
+  cursor:pointer;
+  -webkit-drag: none;
+  color: #000;
+}
+
+#results ul li:hover {
+  background: #6CBFE8;
+  color: #fff;
+}
+
+header {
+  background: #6CBFE8;
+  color: white;
+  display:inline-block;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+footer {
+  background: white;
+  padding: 10px 15px;
+}
+footer ul li {
+    color: black;
+}
+.wi{
+    color: black;
+}
+header .wi{
+    color: white;
+}
+header .main {
+  float: left;
+  display:block;
+  font-size: 8em;
+  margin: 0px 0 0 5px;
+}
+
+header .wi {
+  font-size: 7.2em !important;
+  margin: 10px 0 0 30px;
+}
+
+header .wi-day-sunny{
+  font-size: 6em !important;
+  margin: 20px 0 0 20px;
+}
+
+header .wi-stars{
+  font-size: 6em !important;
+  margin: 20px 0 0 30px;
+}
+
+header [data-cid^="wi-day-"]:not(.wi-day-sunny) {
+  font-size: 5em !important;
+  margin: 30px 0 0 15px;
+}
+
+
+header [data-cid^="wi-night-"]:not(.wi-night-clear) {
+  font-size: 6em !important;
+  margin: 20px 0 0 10px;
+}
+
+header .right {
+  margin: -5px 0 0 0;
+  float: right;
+}
+
+header .right bold {
+  font-size: 4em;
+  display:block;
+  font-weight: 400;
+  margin: -5px 0 0 0;
+}
+
+header .right small {
+  display:block;
+  font-size: 1.9em;
+  font-weight: 300;
+  margin: -15px 0 0 0;
+}
+
+#rainmetertop {
+  margin: -5px 0 0 0;
+  font-weight: 300;
+  display:flex;
+}
+
+#rainmetertop i {
+  font-size: 1.8em !important;
+  margin: 0 3px 0 0;
+}
+
+#rainmetertop .wi-sprinkles {
+  margin-top: 3px;
+}
+
+#rainmetertop tiny {
+  font-size: .5em;
+}
+
+#rainmetertop span {
+  font-size: 1.3em;
+  margin: 0 10px 0 0;
+}
+
+.right i {
+  font-size: 1.5em;
+  margin-bottom: -10px;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+footer ul li {
+  list-style: none;
+  float: left;
+  padding: 5px 10px;
+  text-align: center;
+  width: calc(100% / 3);
+  border-right: 1px #ddd solid;
+}
+
+footer ul li:last-child{
+  border: none !important;
+}
+
+footer ul li i {
+  float: left;
+  display:block !important;
+  margin: 8px 0 0 0px;
+  font-size: 2em;
+}
+
+footer ul li .wi-night-clear{
+  margin: 10px 0 0 5px;
+}
+
+footer ul li [data-cid^="wi-day-"]:not(.wi-day-sunny) {
+  font-size: 1.5em !important;
+  margin: 15px 0 0 2px;
+}
+
+
+footer ul li [data-cid^="wi-night-"]:not(.wi-night-clear) {
+  font-size: 1.8em !important;
+  margin: 10px 0 0 0;
+}
+
+footer ul li span {
+  font-size: 1.2em;
+  margin: 0 -5px 0 0;
+  float: right;
+}
+
+footer ul li #rainmeter {
+  font-weight: 300;
+  color: #aaa;
+  float: right;
+}
+
+#rainmeter i {
+  font-size: 1.4em;
+  margin: 3px 3px 0 9px;
+}
+
+#rainmeter span {
+  font-size: .9em;
+  margin: 0;
+  margin-right: -5px;
+}
