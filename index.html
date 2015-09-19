@@ -5,552 +5,524 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <title>Quản Lý Tài Sản</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="assets/bootstrap-3.3.5-dist/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="assets/bootstrap-3.3.5-dist/bootstrap-3.3.5-dist/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link href="assets/css/qlts.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <body>  
-        <div class="topnav">
-            <div class="pull-left logo-area">
-                <button id="btn-menu-hamburger">
-                    <span class="glyphicon glyphicon-menu-hamburger"></span>
-                </button>
-                <div class="logo-img">
-                    <a href="#"><img src="assets/images/VTV_Logo.png" alt=""/></a>
-                </div>
-            </div>
-            <div class="col-xs-4 hidden-xs" id="toolbar-search">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <span class="glyphicon glyphicon-search"  style="color: #aaa; font-size: 18px;">
-                            </span>
-                        </button>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Tìm kiếm...">
-                </div><!-- /input-group -->
-            </div>
-            <ul class="toolbar pull-right">
-                <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="glyphicon glyphicon-tasks"></span>
-                        <span class="badge badge-deeporange">12</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="glyphicon glyphicon-envelope" ></span>
-                        <span class="badge badge-deeporange">12</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="glyphicon glyphicon-bell"></span>
-                        <span class="badge badge-deeporange">12</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="assets/images/user-2-o.jpg" alt=""/>
-                    </a>
-                    <ul class="dropdown-menu pull-right toolbar-menu-dropdown">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Thông tin tài khoản</a></li>
-                        <li style="border-top: solid 1px #212121"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a></li>
-                    </ul>
-                </li>
-            </ul>
+
+<head>
+  <title>Quản Lý Tài Sản</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="assets/css/qlts.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="topnav">
+    <div class="pull-left logo-area">
+      <button id="btn-menu-hamburger">
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
+      </button>
+      <div class="logo-img">
+        <a href="#"><img src="assets/images/VTV_Logo.png" alt="" /></a>
+      </div>
+    </div>
+    <div class="col-xs-4 hidden-xs" id="toolbar-search">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"  style="color: #aaa; font-size: 18px;"></span>
+        </button>
+        </span>
+        <input type="text" class="form-control" placeholder="Tìm kiếm...">
+      </div>
+      <!-- /input-group -->
+    </div>
+    <ul class="toolbar pull-right">
+      <li>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="glyphicon glyphicon-tasks"></span>
+          <span class="badge badge-deeporange">12</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="glyphicon glyphicon-envelope"></span>
+          <span class="badge badge-deeporange">12</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="glyphicon glyphicon-bell"></span>
+          <span class="badge badge-deeporange">12</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <img src="assets/images/user-2-o.jpg" alt="" />
+        </a>
+        <ul class="dropdown-menu pull-right toolbar-menu-dropdown">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Thông tin tài khoản</a></li>
+          <li style="border-top: solid 1px #212121"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <div class="nav-menu" id="nav-menu">
+      <div class="row user-left">
+        <div class="col-xs-12" id="logo-left">
+          <img src="assets/images/user-2-o.jpg" alt="" />
+          <p id="name"><a href="#">Nguyễn Văn X</a></p>
+          <p id="role">Ban thời sự</p>
         </div>
-        <div class="wrapper">
-            <div class="nav-menu" id="nav-menu">
-                <div class="row user-left">
-                    <div class="col-xs-12" id="logo-left">
-                        <img src="assets/images/user-2-o.jpg" alt=""/>
-                        <p id="name"><a href="#">Nguyễn Văn X</a></p>
-                        <p id="role">Ban thời sự</p>
-                    </div>
-                </div>
-                <div class="title-menu">
-                    tác vụ
-                </div>
-                <div id="cssmenu">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li class="li-home"><a href="/trang-chu.html"><span class="glyphicon glyphicon-home"></span><span class="span-hide">Trang quản lý</span></a></li>
-                        <li class="li-home"><a href="/tai-san/tim-kiem.html"><span class="glyphicon glyphicon-search"></span><span class="span-hide">
+      </div>
+      <div class="title-menu">
+        tác vụ
+      </div>
+      <div id="cssmenu">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="li-home"><a href="/trang-chu.html"><span class="glyphicon glyphicon-home"></span><span class="span-hide">Trang quản lý</span></a></li>
+          <li class="li-home"><a href="/tai-san/tim-kiem.html"><span class="glyphicon glyphicon-search"></span><span class="span-hide">
                                     Tìm kiếm nâng cao
                                 </span></a></li>
-                        <li class='has-sub'><a href="#"><span class="glyphicon glyphicon-pencil"></span><span class="span-hide">Đăng kí sử dụng tài sản</span></a>
-                            <ul>
-                                <li><a href='/tai-san/dang-ki.html'>Tạo đăng kí</a></li>
-                                <li><a href='#'>Theo dõi các đăng kí</a></li>
-                            </ul>
-                        </li>
-                        <li class='has-sub'>
-                            <a href="#"><span class="glyphicon glyphicon-wrench"></span><span class="span-hide">Thông báo hỏng hóc</span></a>
-                            <ul>
-                                <li><a href='#'>Tạo thông báo</a></li>
-                                <li><a href='#'>Theo dõi các thông báo</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><span class="glyphicon glyphicon-compressed"></span><span class="span-hide">Quản lý hỏng hóc</span></a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="span-hide">Quản lý chi tiết tài sản</span></a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-retweet"></span><span class="span-hide">Quản lý điều chuyển</span></a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span><span class="span-hide">Quản lý mua mới</span></a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-paperclip"></span><span class="span-hide">Báo cáo khấu hao tài sản</span></a></li>
-                    </ul>
-                </div>
-                <div class="title-menu" style="padding-top: 30px;">
-                    mở rộng
-                </div>
-                <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span><span class="span-hide">Tin nhắn</span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-calendar"></span><span class="span-hide">Lịch</span></a></li>
-                </ul>
-            </div>
-            <div class="" id="page-content">
-                <div class="col-md-10 mid-content" id="mid-content">
-                    <ul class="url-content">
-                        <li>
-                            <a href="#">Trang chủ </a>
-                        </li>
-                        <li> 
-                            <span class="glyphicon glyphicon-menu-right"></span><a href="#">Đăng ký sử dụng tài sản</a>
-                        </li>
-                    </ul>
-                    <div class="my-row">
-                        <div class="col-md-3">
-                            <div class="module module-small">
-                                <div class="panel-heading">
-                                    <h5>
+          <li class='has-sub'><a href="#"><span class="glyphicon glyphicon-pencil"></span><span class="span-hide">Đăng kí sử dụng tài sản</span></a>
+            <ul>
+              <li><a href='/tai-san/dang-ki.html'>Tạo đăng kí</a></li>
+              <li><a href='#'>Theo dõi các đăng kí</a></li>
+            </ul>
+          </li>
+          <li class='has-sub'>
+            <a href="#"><span class="glyphicon glyphicon-wrench"></span><span class="span-hide">Thông báo hỏng hóc</span></a>
+            <ul>
+              <li><a href='#'>Tạo thông báo</a></li>
+              <li><a href='#'>Theo dõi các thông báo</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><span class="glyphicon glyphicon-compressed"></span><span class="span-hide">Quản lý hỏng hóc</span></a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="span-hide">Quản lý chi tiết tài sản</span></a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-retweet"></span><span class="span-hide">Quản lý điều chuyển</span></a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span><span class="span-hide">Quản lý mua mới</span></a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-paperclip"></span><span class="span-hide">Báo cáo khấu hao tài sản</span></a></li>
+        </ul>
+      </div>
+      <div class="title-menu" style="padding-top: 30px;">
+        mở rộng
+      </div>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span><span class="span-hide">Tin nhắn</span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-calendar"></span><span class="span-hide">Lịch</span></a></li>
+      </ul>
+    </div>
+    <div class="" id="page-content">
+      <div class="col-md-10 mid-content" id="mid-content">
+        <ul class="url-content">
+          <li>
+            <a href="#">Trang chủ </a>
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-menu-right"></span><a href="#">Đăng ký sử dụng tài sản</a>
+          </li>
+        </ul>
+        <div class="my-row">
+          <div class="col-md-3">
+            <div class="module module-small">
+              <div class="panel-heading">
+                <h5>
                                         Số lượng tài sản
                                     </h5>
-                                </div>
-                                <div class="col-md-12">
-                                    <span class="icon-module-small glyphicon glyphicon-camera" style="color: #4caf50"></span>
-                                    <span class="number-module-small pull-right">2,210</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="module module-small">
-                                <div class="panel-heading">
-                                    <h5>
+              </div>
+              <div class="col-md-12">
+                <span class="icon-module-small glyphicon glyphicon-camera" style="color: #4caf50"></span>
+                <span class="number-module-small pull-right">2,210</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="module module-small">
+              <div class="panel-heading">
+                <h5>
                                         Hỏng hóc
                                     </h5>
-                                </div>
-                                <div class="col-md-12">
-                                    <span class="icon-module-small glyphicon glyphicon-wrench" style="color: #2e6da4"></span>
-                                    <span class="number-module-small pull-right">2,210</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="module module-small">
-                                <div class="panel-heading">
-                                    <h5>
+              </div>
+              <div class="col-md-12">
+                <span class="icon-module-small glyphicon glyphicon-wrench" style="color: #2e6da4"></span>
+                <span class="number-module-small pull-right">2,210</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="module module-small">
+              <div class="panel-heading">
+                <h5>
                                         Đơn đăng kí mới
                                     </h5>
-                                </div>
-                                <div class="col-md-12">
-                                    <span class="icon-module-small glyphicon glyphicon-copy" style="color: #d9534f"></span>
-                                    <span class="number-module-small pull-right">2,210</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="module module-small">
-                                <div class="panel-heading">
-                                    <h5>
+              </div>
+              <div class="col-md-12">
+                <span class="icon-module-small glyphicon glyphicon-copy" style="color: #d9534f"></span>
+                <span class="number-module-small pull-right">2,210</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="module module-small">
+              <div class="panel-heading">
+                <h5>
                                         Số lượng người đăng kí
                                     </h5>
-                                </div>
-                                <div class="col-md-12">
-                                    <span class="icon-module-small glyphicon glyphicon-user" style="color: #245580"></span>
-                                    <span class="number-module-small pull-right">2,210</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" style="padding: 0px;">
-                        <div class="col-md-6">
-                            <div class="module">
-                                <div class="panel-heading"  id="module-timeline">
-                                    <h5>
+              </div>
+              <div class="col-md-12">
+                <span class="icon-module-small glyphicon glyphicon-user" style="color: #245580"></span>
+                <span class="number-module-small pull-right">2,210</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="padding: 0px;">
+          <div class="col-md-6">
+            <div class="module">
+              <div class="panel-heading" id="module-timeline">
+                <h5>
                                         Hoạt động gầy đây
                                         <a href="#" class="pull-right refresh"><span class="glyphicon glyphicon-refresh"></span></a>
                                     </h5>
-                                </div>
-                                <ul class="mini-timeline">
-                                    <li>
-                                        <span class="timeline-event">Đăng ký sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">6 phút trước</p>
-                                    </li>
-                                    <li>
-                                        <span class="timeline-event">Thông báo hỏng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">2 ngày trước</p>
-                                    </li>
-                                    <li>
-                                        <span class="timeline-event">Đăng ký sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">3 tuần trước</p>
-                                    </li>
-                                    <li>
-                                        <span class="timeline-event">Đăng ký sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">6 phút trước</p>
-                                    </li>
-                                    <li>
-                                        <span class="timeline-event">Thông báo hỏng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">2 ngày trước</p>
-                                    </li>
-                                    <li>
-                                        <span class="timeline-event">Đăng ký sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">3 tuần trước</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="module module2">
-                                <div class="panel-heading"  id="module-notic">
-                                    <h5>
+              </div>
+              <ul class="mini-timeline">
+                <li>
+                  <span class="timeline-event">Đăng ký sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">6 phút trước</p>
+                </li>
+                <li>
+                  <span class="timeline-event">Thông báo hỏng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">2 ngày trước</p>
+                </li>
+                <li>
+                  <span class="timeline-event">Đăng ký sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">3 tuần trước</p>
+                </li>
+                <li>
+                  <span class="timeline-event">Đăng ký sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">6 phút trước</p>
+                </li>
+                <li>
+                  <span class="timeline-event">Thông báo hỏng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">2 ngày trước</p>
+                </li>
+                <li>
+                  <span class="timeline-event">Đăng ký sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">3 tuần trước</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="module module2">
+              <div class="panel-heading" id="module-notic">
+                <h5>
                                         Lịch sử trạng thái đơn đăng kí
                                         <a href="#" class="pull-right refresh"><span class="glyphicon glyphicon-refresh"></span></a>
                                     </h5>
-                                </div>
-                                <ul class="mini-timeline">
-                                    <li>
-                                        <span class="timeline-event">Được cấp phép sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">6 phút trước</p>
-                                    </li>
-                                    <li>
-                                        <span class="timeline-event">Hủy đăng ký <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">2 ngày trước</p>
-                                    </li>
-                                    <li>
-                                        <span class="timeline-event">Đã tiếp nhận tài sản hỏng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">3 tuần trước</p>
-                                    </li>
-                                    <li>
-                                        <span class="timeline-event">Được cấp phép sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">6 phút trước</p>
-                                    </li>
-                                    <li>
-                                        <span class="timeline-event">Hủy đăng ký <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">2 ngày trước</p>
-                                    </li>
-                                    <li>
-                                        <span class="timeline-event">Đã tiếp nhận tài sản hỏng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
-                                        <p class="timeline-time">3 tuần trước</p>
-                                    </li>
+              </div>
+              <ul class="mini-timeline">
+                <li>
+                  <span class="timeline-event">Được cấp phép sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">6 phút trước</p>
+                </li>
+                <li>
+                  <span class="timeline-event">Hủy đăng ký <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">2 ngày trước</p>
+                </li>
+                <li>
+                  <span class="timeline-event">Đã tiếp nhận tài sản hỏng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">3 tuần trước</p>
+                </li>
+                <li>
+                  <span class="timeline-event">Được cấp phép sử dụng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">6 phút trước</p>
+                </li>
+                <li>
+                  <span class="timeline-event">Hủy đăng ký <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">2 ngày trước</p>
+                </li>
+                <li>
+                  <span class="timeline-event">Đã tiếp nhận tài sản hỏng <a href="#" class="timeline-product">Camera Sony HDR123</a></span>
+                  <p class="timeline-time">3 tuần trước</p>
+                </li>
 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="module module-lage">
-                                <div class="panel-heading">
-                                    <h5>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="module module-lage">
+              <div class="panel-heading">
+                <h5>
                                         Tài sản mới cập nhật
                                         <a href="#" class="pull-right refresh"><span class="glyphicon glyphicon-refresh"></span></a>
                                     </h5>
-                                </div>
-                                <div class="container-table">
-                                    <table class="table table-bordered m-n" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>Mã tài sản</th>
-                                                <th>Tên tài sản</th>
-                                                <th>Trạng thái</th>
-                                                <th>Ngày tạo</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><a href="#">14124124</a></td>
-                                                <td><a href="#">Camera Sony HDN1231</a></td>
-                                                <td>Đang xử lý</td>
-                                                <td>12/02/2015</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#">14124124</a></td>
-                                                <td><a href="#">Camera Sony HDN1231</a></td>
-                                                <td>Đang xử lý</td>
-                                                <td>12/02/2015</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#">14124124</a></td>
-                                                <td><a href="#">Camera Sony HDN1231</a></td>
-                                                <td>Đang xử lý</td>
-                                                <td>12/02/2015</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#">14124124</a></td>
-                                                <td><a href="#">Camera Sony HDN1231</a></td>
-                                                <td>Đang xử lý</td>
-                                                <td>12/02/2015</td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#">14124124</a></td>
-                                                <td><a href="#">Camera Sony HDN1231</a></td>
-                                                <td>Đang xử lý</td>
-                                                <td>12/02/2015</td>
-                                            </tr>
+              </div>
+              <div class="container-table">
+                <table class="table table-bordered m-n" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Mã tài sản</th>
+                      <th>Tên tài sản</th>
+                      <th>Trạng thái</th>
+                      <th>Ngày tạo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#">14124124</a></td>
+                      <td><a href="#">Camera Sony HDN1231</a></td>
+                      <td>Đang xử lý</td>
+                      <td>12/02/2015</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">14124124</a></td>
+                      <td><a href="#">Camera Sony HDN1231</a></td>
+                      <td>Đang xử lý</td>
+                      <td>12/02/2015</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">14124124</a></td>
+                      <td><a href="#">Camera Sony HDN1231</a></td>
+                      <td>Đang xử lý</td>
+                      <td>12/02/2015</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">14124124</a></td>
+                      <td><a href="#">Camera Sony HDN1231</a></td>
+                      <td>Đang xử lý</td>
+                      <td>12/02/2015</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">14124124</a></td>
+                      <td><a href="#">Camera Sony HDN1231</a></td>
+                      <td>Đang xử lý</td>
+                      <td>12/02/2015</td>
+                    </tr>
 
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div class="chat-bar" id="chat-bar">
-                    <ul class="list-group pull-right list-friends">
-                        <li class="list-group-item list-group-item-cus btn-no-css">
-                            <button class="btn-chat" id="btn-chat">Trò chuyện</button>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-1.jpg" alt=""/>
-                                Nguyễn Văn Long
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-2.jpg" alt=""/>
-                                Lê Thị Hải
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-3.jpg" alt=""/>
-                                Phạm Quốc Khải
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-4.jpg" alt=""/>
-                                Nguyễn Trần Dũng
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-5.jpg" alt=""/>
-                                Lê Văn Sơn
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-6.jpg" alt=""/>
-                                Ngô Văn Tùng
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-1.jpg" alt=""/>
-                                Nguyễn Văn Long
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-2.jpg" alt=""/>
-                                Lê Thị Hải
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-3.jpg" alt=""/>
-                                Phạm Quốc Khải
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-4.jpg" alt=""/>
-                                Nguyễn Trần Dũng
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-5.jpg" alt=""/>
-                                Lê Văn Sơn
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-6.jpg" alt=""/>
-                                Ngô Văn Tùng
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-1.jpg" alt=""/>
-                                Nguyễn Văn Long
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-2.jpg" alt=""/>
-                                Lê Thị Hải
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-3.jpg" alt=""/>
-                                Phạm Quốc Khải
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-4.jpg" alt=""/>
-                                Nguyễn Trần Dũng
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-5.jpg" alt=""/>
-                                Lê Văn Sơn
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-6.jpg" alt=""/>
-                                Ngô Văn Tùng
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-1.jpg" alt=""/>
-                                Nguyễn Văn Long
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-2.jpg" alt=""/>
-                                Lê Thị Hải
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-3.jpg" alt=""/>
-                                Phạm Quốc Khải
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-4.jpg" alt=""/>
-                                Nguyễn Trần Dũng
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-5.jpg" alt=""/>
-                                Lê Văn Sơn
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-6.jpg" alt=""/>
-                                Ngô Văn Tùng
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-1.jpg" alt=""/>
-                                Nguyễn Văn Long
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-2.jpg" alt=""/>
-                                Lê Thị Hải
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-3.jpg" alt=""/>
-                                Phạm Quốc Khải
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-4.jpg" alt=""/>
-                                Nguyễn Trần Dũng
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-5.jpg" alt=""/>
-                                Lê Văn Sơn
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                        <li class="list-group-item friends">
-                            <a href="#" id="firend-1" class="">
-                                <img src="assets/images/users/user-2-6.jpg" alt=""/>
-                                Ngô Văn Tùng
-                                <span class="friend-status img-circle"></span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="search-chat-bar">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Tìm kiếm bạn...">
-                            <div class="input-group-btn dropup">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="glyphicon glyphicon-cog"></span>
-                                </button>
-                                <ul class="dropdown-menu" style="left: -150px;">
-                                    <li><a href="#">Tắt trò chuyện</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
+                  </tbody>
+                </table>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <script src="assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-        <script src="assets/bootstrap-3.3.5-dist/bootstrap-3.3.5-dist/js/bootstrap.js" type="text/javascript"></script>
-        <script src="assets/js/qlts.js" type="text/javascript"></script>
-        <script>
-            $('#btn-menu-hamburger').click(function () {
-                $('#page-contents').toggleClass('slide-page-content');
-            });
-        </script>
-    </body>
+
+        </div>
+      </div>
+      <div class="chat-bar" id="chat-bar">
+        <ul class="list-group pull-right list-friends">
+          <li class="list-group-item list-group-item-cus btn-no-css">
+            <button class="btn-chat" id="btn-chat">Trò chuyện</button>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-1.jpg" alt="" /> Nguyễn Văn Long
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-2.jpg" alt="" /> Lê Thị Hải
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-3.jpg" alt="" /> Phạm Quốc Khải
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-4.jpg" alt="" /> Nguyễn Trần Dũng
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-5.jpg" alt="" /> Lê Văn Sơn
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-6.jpg" alt="" /> Ngô Văn Tùng
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-1.jpg" alt="" /> Nguyễn Văn Long
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-2.jpg" alt="" /> Lê Thị Hải
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-3.jpg" alt="" /> Phạm Quốc Khải
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-4.jpg" alt="" /> Nguyễn Trần Dũng
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-5.jpg" alt="" /> Lê Văn Sơn
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-6.jpg" alt="" /> Ngô Văn Tùng
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-1.jpg" alt="" /> Nguyễn Văn Long
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-2.jpg" alt="" /> Lê Thị Hải
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-3.jpg" alt="" /> Phạm Quốc Khải
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-4.jpg" alt="" /> Nguyễn Trần Dũng
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-5.jpg" alt="" /> Lê Văn Sơn
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-6.jpg" alt="" /> Ngô Văn Tùng
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-1.jpg" alt="" /> Nguyễn Văn Long
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-2.jpg" alt="" /> Lê Thị Hải
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-3.jpg" alt="" /> Phạm Quốc Khải
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-4.jpg" alt="" /> Nguyễn Trần Dũng
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-5.jpg" alt="" /> Lê Văn Sơn
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-6.jpg" alt="" /> Ngô Văn Tùng
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-1.jpg" alt="" /> Nguyễn Văn Long
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-2.jpg" alt="" /> Lê Thị Hải
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-3.jpg" alt="" /> Phạm Quốc Khải
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-4.jpg" alt="" /> Nguyễn Trần Dũng
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-5.jpg" alt="" /> Lê Văn Sơn
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+          <li class="list-group-item friends">
+            <a href="#" id="firend-1" class="">
+              <img src="assets/images/users/user-2-6.jpg" alt="" /> Ngô Văn Tùng
+              <span class="friend-status img-circle"></span>
+            </a>
+          </li>
+        </ul>
+        <div class="search-chat-bar">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Tìm kiếm bạn...">
+            <div class="input-group-btn dropup">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-cog"></span>
+              </button>
+              <ul class="dropdown-menu" style="left: -150px;">
+                <li><a href="#">Tắt trò chuyện</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="assets/js/qlts.js" type="text/javascript"></script>
+  <script>
+    $('#btn-menu-hamburger').click(function() {
+      $('#page-contents').toggleClass('slide-page-content');
+    });
+  </script>
+</body>
+
 </html>
