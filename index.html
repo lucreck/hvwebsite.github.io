@@ -4,6 +4,7 @@
   <script src="bootstrap-3.3.6-dist/js/jquery-2.1.1.min.js"></script>
   <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css">
   <script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
   <script src="js/jquery-ui.min.js"></script>
   <title>Hanoi Puzzle</title>
   <style>
@@ -380,7 +381,6 @@
     $( ".puzzle" ).sortable();
     $( ".puzzle" ).disableSelection();
   });
-  var audioBackground = new Audio("1.mp3");
-  audioBackground.play();
+  responsiveVoice.speak("Good evening Lucre-sama!");
 </script>
 </html>
