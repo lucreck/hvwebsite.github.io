@@ -199,7 +199,7 @@
   </div>
   <div class="content" style="width: 100%;height: 100%">
     <input id="textExample" type="text" style="border: none; height: 60px; color:#35C4F0; background: none; background-color: black;" />
-    <button class="btn btn-danger" onclick="answer()" style="left:50%;top:55%;margin-left:-100px; position: absolute">What is lucre-sama doing?</button>
+    <!-- <button class="btn btn-danger" onclick="answer()" style="left:50%;top:55%;margin-left:-100px; position: absolute">What is lucre-sama doing?</button> -->
   </div>
 </body>
 <script>
@@ -220,11 +220,11 @@ $(".content").hide();
 setTimeout(function () {
     $(".content").show();
     $("#textExample").show();
-       showOut("Good evening Linh-sama! Can I help you?");
+       showOut("The website cannot access now!");
    }, 3000);
 
 function answer(){
-  showOut("lucre-sama is missing you so much!");
+  showOut("..!");
 }
 function showOut(text){
   speak(text);
