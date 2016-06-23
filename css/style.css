@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:700,400);
+html,
+body {
+  height: 100%;
+  background: #212121;
+  font-family: 'Amatic SC', cursive;
+}
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.character {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.about {
+  position: absolute;
+  top: calc(50% + 100px);
+  left: calc(50% - 130px);
+  text-align: center;
+}
+
+.about h1, h2 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.about h2 {
+  font-size: 40px;
+}
+
+.character > div {
+  position: absolute;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #546e7a;
+  background: -webkit-gradient(left top, right top, color-stop(0%, #546e7a), color-stop(49%, #546e7a), color-stop(50%, #607d8b), color-stop(100%, #546e7a));
+  background: -webkit-linear-gradient(left, #546e7a 0%, #546e7a 49%, #607d8b 50%, #546e7a 100%);
+  background: linear-gradient(to right, #546e7a 0%, #546e7a 49%, #607d8b 50%, #546e7a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#546e7a', endColorstr='#546e7a', GradientType=1 );
+}
+
+.chop {
+  width: 100%;
+  height: 100%;
+  background: #455A64;
+  -webkit-clip-path: polygon(50% 0%, 100% 38%, 100% 54%, 51% 63%, 0 54%, 0 39%);
+  clip-path: polygon(50% 0%, 100% 38%, 100% 54%, 51% 63%, 0 54%, 0 39%);
+  background: #455a64;
+  background: -webkit-gradient(left top, right top, color-stop(0%, #455a64), color-stop(49%, #455a64), color-stop(50%, #546e7a), color-stop(100%, #546e7a));
+  background: -webkit-linear-gradient(left, #455a64 0%, #455a64 49%, #546e7a 50%, #546e7a 100%);
+  background: linear-gradient(to right, #455a64 0%, #455a64 49%, #546e7a 50%, #546e7a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#455a64', endColorstr='#546e7a', GradientType=1 );
+}
+
+.chopduoi {
+  width: 100%;
+  height: 100%;
+  background: #263238;
+  -webkit-clip-path: polygon(50% 82%, 0 55%, 100% 55%);
+  clip-path: polygon(50% 82%, 0 55%, 100% 55%);
+}
+
+.scraft {
+  width: 100%;
+  height: 100%;
+  background: #D32F2F;
+  -webkit-clip-path: polygon(1% 84%, 8% 75%, 23% 81%, 38% 84%, 56% 85%, 69% 85%, 83% 83%, 92% 77%, 98% 75%, 99% 88%, 94% 95%, 74% 98%, 57% 100%, 42% 100%, 25% 100%, 14% 98%, 5% 94%);
+  clip-path: polygon(1% 84%, 8% 75%, 23% 81%, 38% 84%, 56% 85%, 69% 85%, 83% 83%, 92% 77%, 98% 75%, 99% 88%, 94% 95%, 74% 98%, 57% 100%, 42% 100%, 25% 100%, 14% 98%, 5% 94%);
+}
+
+.smallchop {
+  height: 60px;
+  width: 8px;
+  background: #263238;
+  position: absolute;
+  left: calc(50% - 4px);
+  top: 20px;
+}
+
+.smallchop:nth-child(1) {
+  left: 10px;
+  height: 20px;
+  top: 55px;
+}
+
+.smallchop:nth-child(2) {
+  left: 30px;
+  height: 30px;
+  top: 45px;
+}
+
+.smallchop:nth-child(3) {
+  left: 50px;
+  height: 40px;
+  top: 35px;
+}
+
+.smallchop:nth-child(5) {
+  left: 90px;
+  height: 40px;
+  top: 35px;
+}
+
+.smallchop:nth-child(6) {
+  left: 110px;
+  height: 30px;
+  top: 45px;
+}
+
+.smallchop:nth-child(7) {
+  left: 130px;
+  height: 20px;
+  top: 55px;
+}
+
+.earleft, .earright {
+  height: 30px;
+  width: 8px;
+  background: #546E7A;
+  top: 55px;
+}
+
+.earleft {
+  left: -7px;
+  background: #455A64;
+}
+
+.earright {
+  right: -7px;
+}
+
+.eyesleft, .eyesright {
+  width: 15px;
+  height: 15px;
+  background: #FFD740;
+  border-radius: 60px;
+  top: 85px;
+  z-index: 0;
+  -webkit-animation: eyes 1s linear infinite alternate;
+          animation: eyes 1s linear infinite alternate;
+}
+
+.eyesleft {
+  left: 35px;
+}
+
+.eyesright {
+  right: 35px;
+}
+
+@-webkit-keyframes eyes {
+  from {
+    background: #FFD740;
+    box-shadow: 0 0 2px #FFF9C4;
+  }
+  to {
+    background: #FFFF8D;
+    box-shadow: 0 0 4px #FFf;
+  }
+}
+
+@keyframes eyes {
+  from {
+    background: #FFD740;
+    box-shadow: 0 0 2px #FFF9C4;
+  }
+  to {
+    background: #FFFF8D;
+    box-shadow: 0 0 4px #FFf;
+  }
+}

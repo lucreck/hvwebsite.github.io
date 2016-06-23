@@ -1,302 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    
+    
+    <link rel="stylesheet" href="css/reset.css">
 
-<head>
-  <script src="bootstrap-3.3.6-dist/js/jquery-2.1.1.min.js"></script>
-  <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css">
-  <script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
-  <script src="js/jquery-ui.min.js"></script>
-<style>
-    body {
-      background:#000;
-    }
+    
+        <link rel="stylesheet" href="css/style.css">
 
-    #load, #textExample {
-      position:absolute;
-      width:600px;
-      height:36px;
-      left:50%;
-      top:40%;
-      margin-left:-300px;
-      overflow:visible;
-      -webkit-user-select:none;
-      -moz-user-select:none;
-      -ms-user-select:none;
-      user-select:none;
-      cursor:default;
-      font-size: 30px;
-    }
+    
+    
+    
+  </head>
 
-    #load div {
-      position:absolute;
-      width:20px;
-      height:36px;
-      opacity:0;
-      font-family:Helvetica, Arial, sans-serif;
-      animation:move 2s linear infinite;
-      -o-animation:move 2s linear infinite;
-      -moz-animation:move 2s linear infinite;
-      -webkit-animation:move 2s linear infinite;
-      transform:rotate(180deg);
-      -o-transform:rotate(180deg);
-      -moz-transform:rotate(180deg);
-      -webkit-transform:rotate(180deg);
-      color:#35C4F0;
-    }
+  <body>
 
-    #load div:nth-child(2) {
-      animation-delay:0.2s;
-      -o-animation-delay:0.2s;
-      -moz-animation-delay:0.2s;
-      -webkit-animation-delay:0.2s;
-    }
-    #load div:nth-child(3) {
-      animation-delay:0.4s;
-      -o-animation-delay:0.4s;
-      -webkit-animation-delay:0.4s;
-      -webkit-animation-delay:0.4s;
-    }
-    #load div:nth-child(4) {
-      animation-delay:0.6s;
-      -o-animation-delay:0.6s;
-      -moz-animation-delay:0.6s;
-      -webkit-animation-delay:0.6s;
-    }
-    #load div:nth-child(5) {
-      animation-delay:0.8s;
-      -o-animation-delay:0.8s;
-      -moz-animation-delay:0.8s;
-      -webkit-animation-delay:0.8s;
-    }
-    #load div:nth-child(6) {
-      animation-delay:1s;
-      -o-animation-delay:1s;
-      -moz-animation-delay:1s;
-      -webkit-animation-delay:1s;
-    }
-    #load div:nth-child(7) {
-      animation-delay:1.2s;
-      -o-animation-delay:1.2s;
-      -moz-animation-delay:1.2s;
-      -webkit-animation-delay:1.2s;
-    }
-
-    @keyframes move {
-      0% {
-        left:0;
-        opacity:0;
-      }
-    	35% {
-    		left: 41%;
-    		-moz-transform:rotate(0deg);
-    		-webkit-transform:rotate(0deg);
-    		-o-transform:rotate(0deg);
-    		transform:rotate(0deg);
-    		opacity:1;
-    	}
-    	65% {
-    		left:59%;
-    		-moz-transform:rotate(0deg);
-    		-webkit-transform:rotate(0deg);
-    		-o-transform:rotate(0deg);
-    		transform:rotate(0deg);
-    		opacity:1;
-    	}
-    	100% {
-    		left:100%;
-    		-moz-transform:rotate(-180deg);
-    		-webkit-transform:rotate(-180deg);
-    		-o-transform:rotate(-180deg);
-    		transform:rotate(-180deg);
-    		opacity:0;
-    	}
-    }
-
-    @-moz-keyframes move {
-    	0% {
-    		left:0;
-    		opacity:0;
-    	}
-    	35% {
-    		left:41%;
-    		-moz-transform:rotate(0deg);
-    		transform:rotate(0deg);
-    		opacity:1;
-    	}
-    	65% {
-    		left:59%;
-    		-moz-transform:rotate(0deg);
-    		transform:rotate(0deg);
-    		opacity:1;
-    	}
-    	100% {
-    		left:100%;
-    		-moz-transform:rotate(-180deg);
-    		transform:rotate(-180deg);
-    		opacity:0;
-    	}
-    }
-
-    @-webkit-keyframes move {
-    	0% {
-    		left:0;
-    		opacity:0;
-    	}
-    	35% {
-    		left:41%;
-    		-webkit-transform:rotate(0deg);
-    		transform:rotate(0deg);
-    		opacity:1;
-    	}
-    	65% {
-    		left:59%;
-    		-webkit-transform:rotate(0deg);
-    		transform:rotate(0deg);
-    		opacity:1;
-    	}
-    	100% {
-    		left:100%;
-    		-webkit-transform:rotate(-180deg);
-    		transform:rotate(-180deg);
-    		opacity:0;
-    	}
-    }
-
-    @-o-keyframes move {
-    	0% {
-    		left:0;
-    		opacity:0;
-    	}
-    	35% {
-    		left:41%;
-    		-o-transform:rotate(0deg);
-    		transform:rotate(0deg);
-    		opacity:1;
-    	}
-    	65% {
-    		left:59%;
-    		-o-transform:rotate(0deg);
-    		transform:rotate(0deg);
-    		opacity:1;
-    	}
-    	100% {
-    		left:100%;
-    		-o-transform:rotate(-180deg);
-    		transform:rotate(-180deg);
-    		opacity:0;
-    	}
-    }
-</style>
-</head>
-<body>
-  <div id="load">
-    <div>G</div>
-    <div>N</div>
-    <div>I</div>
-    <div>D</div>
-    <div>A</div>
-    <div>O</div>
-    <div>L</div>
+    <div class="character">
+  <div class="body part"></div>
+  <div class="chopduoi"></div>
+  <div class="earleft"></div>
+  <div class="earright"></div>
+  <div class="eyesleft"></div>
+  <div class="eyesright"></div>
+  <div class="chop">
+    <div class="smallchop"></div>
+    <div class="smallchop"></div>
+    <div class="smallchop"></div>
+    <div class="smallchop"></div>
+    <div class="smallchop"></div>
+    <div class="smallchop"></div>
+    <div class="smallchop"></div>
   </div>
-  <div class="content" style="width: 100%;height: 100%">
-    <input id="textExample" type="text" style="border: none; height: 60px; color:#35C4F0; background: none; background-color: black;" />
-    <!-- <button class="btn btn-danger" onclick="answer()" style="left:50%;top:55%;margin-left:-100px; position: absolute">What is lucre-sama doing?</button> -->
-  </div>
-</body>
-<script>
-function speak(s){
-  var msg = new SpeechSynthesisUtterance(s);
-  var voices = window.speechSynthesis.getVoices();
-  msg.voice = voices.filter(function(voice) { return voice.name == 'Google UK English Female'; })[0];
-  msg.lang = 'en-GB';
-
-  msg.onend = function(e) {
-    console.log('Finished in ' + event.elapsedTime + ' seconds.');
-  };
-
-  speechSynthesis.speak(msg);
-}
-speak("");
-$(".content").hide();
-setTimeout(function () {
-    $(".content").show();
-    $("#textExample").show();
-       showOut("The website cannot access now!");
-   }, 3000);
-
-function answer(){
-  showOut("..!");
-}
-function showOut(text){
-  speak(text);
-  animateText("textExample", text);
-}
-
-/*Bounce effect - do not edit unless you get it!*/
-function bounce(progress) {
-  for(var a = 0, b = 1, result; 1; a += b, b /= 2) {
-    if (progress >= (7 - 4 * a) / 11) {
-      return -Math.pow((11 - 6 * a - 11 * progress) / 4, 2) + Math.pow(b, 2);
-    }
-  }
-}
-/*Animation time interval function - do not edit*/
-
-function animate(opts) {
-
-  var start = new Date
-
-  var id = setInterval(function() {
-    var timePassed = new Date - start
-    var progress = timePassed / opts.duration
-
-    if (progress > 1) progress = 1
-
-    var delta = opts.delta(progress)
-    opts.step(delta)
-
-    if (progress == 1) {
-      clearInterval(id)
-    }
-  }, opts.delay || 10)
-
-}
-/*the text typing animation function*/
-animateText('textExample', "Hello");
-
-function animateText(id, text1) {
-  var textArea = document.getElementById(id);
- /*Predefine text to be animated into the textarea*/
-
-  var text = text1;
-
-  /*Declare animation starting point at 0, through the full length of text*/
-
-  var to = text.length, from = 0
-
- /*Typical animation settings*/
-
-  animate({
-    delay: 10,
-    duration: 1000,
-    delta:bounce,
-    step: function(delta) {
-
-	  /*Animates the forward typing then deleting and retyping effect*/
-
-      var typedResult = (to-from) * delta + from
-
-	  /*Assign the value of textarea to the string assigned to 'text' variable*/
-
-      textArea.value = text.substr(0, Math.ceil(typedResult))
-    }
-  })
-};
-
-/*Again, Again!! Clear text area, run animateText() again when button is clicked*/
-
-function typeAgain(textArea){
-   var text=''
-   animateText('textExample', "hello linh sama");
-  };
-</script>
+  <div class="scraft"></div>
+</div>
+<div class="about">
+  <h1>Hi, I'm Loi Pham</h1>
+  <h2>front-end web developer</h2>
+</div>
+    
+    
+    
+    
+    
+  </body>
 </html>
