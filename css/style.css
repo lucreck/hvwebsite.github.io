@@ -22,9 +22,12 @@ body {
 }
 
 .character {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
+  background: #546E7A;
   position: relative;
+  -webkit-animation: intro 2s 1s forwards;
+          animation: intro 2s 1s forwards;
 }
 
 .about {
@@ -37,6 +40,7 @@ body {
 .about h1, h2 {
   font-weight: bold;
   font-size: 40px;
+  color: #455A64;
 }
 
 .about h2 {
@@ -45,6 +49,31 @@ body {
 
 .character > div {
   position: absolute;
+  opacity: 0;
+  -webkit-animation: part .2s 2s forwards;
+          animation: part .2s 2s forwards;
+}
+
+.character > div.chop {
+  position: absolute;
+  opacity: 0;
+  -webkit-animation: part 1s 2s forwards, openChop 1s 3s forwards;
+          animation: part 1s 2s forwards, openChop 1s 3s forwards;
+}
+
+.character > .eyesleft, .character > .eyesright {
+  -webkit-animation: part 1s 4s forwards, eyes 1s 4s linear infinite alternate;
+          animation: part 1s 4s forwards, eyes 1s 4s linear infinite alternate;
+}
+
+.smallchop {
+  opacity: 0;
+  -ms-transform: translateY(12px);
+  /* IE 9 */
+  -webkit-transform: translateY(12px);
+  /* Safari */
+  -webkit-animation: smallChop 1s 3s forwards;
+          animation: smallChop 1s 3s forwards;
 }
 
 .body {
@@ -61,14 +90,15 @@ body {
 .chop {
   width: 100%;
   height: 100%;
-  background: #455A64;
-  -webkit-clip-path: polygon(50% 0%, 100% 38%, 100% 54%, 51% 63%, 0 54%, 0 39%);
-  clip-path: polygon(50% 0%, 100% 38%, 100% 54%, 51% 63%, 0 54%, 0 39%);
+  -webkit-clip-path: polygon(50% 20%, 100% 38%, 100% 54%, 51% 83%, 0 54%, 0 39%);
+  clip-path: polygon(50% 20%, 100% 38%, 100% 54%, 51% 83%, 0 54%, 0 39%);
   background: #455a64;
   background: -webkit-gradient(left top, right top, color-stop(0%, #455a64), color-stop(49%, #455a64), color-stop(50%, #546e7a), color-stop(100%, #546e7a));
   background: -webkit-linear-gradient(left, #455a64 0%, #455a64 49%, #546e7a 50%, #546e7a 100%);
   background: linear-gradient(to right, #455a64 0%, #455a64 49%, #546e7a 50%, #546e7a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#455a64', endColorstr='#546e7a', GradientType=1 );
+  -webkit-animation: part 1s 2s forwards, openChop 1s 3s forwards;
+          animation: part 1s 2s forwards, openChop 1s 3s forwards;
 }
 
 .chopduoi {
@@ -155,8 +185,6 @@ body {
   border-radius: 60px;
   top: 85px;
   z-index: 0;
-  -webkit-animation: eyes 1s linear infinite alternate;
-          animation: eyes 1s linear infinite alternate;
 }
 
 .eyesleft {
@@ -168,23 +196,81 @@ body {
 }
 
 @-webkit-keyframes eyes {
-  from {
-    background: #FFD740;
-    box-shadow: 0 0 2px #FFF9C4;
-  }
-  to {
-    background: #FFFF8D;
-    box-shadow: 0 0 4px #FFf;
+  100% {
+    opacity: 1;
   }
 }
 
 @keyframes eyes {
-  from {
-    background: #FFD740;
-    box-shadow: 0 0 2px #FFF9C4;
+  100% {
+    opacity: 1;
   }
-  to {
-    background: #FFFF8D;
-    box-shadow: 0 0 4px #FFf;
+}
+@-webkit-keyframes intro {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+}
+@keyframes intro {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+}
+@-webkit-keyframes part {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes part {
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes openChop {
+  100% {
+    -webkit-clip-path: polygon(50% 0%, 100% 37%, 100% 54%, 51% 63%, 0 54%, 0 39%);
+    clip-path: polygon(50% 0%, 100% 38%, 100% 54%, 51% 63%, 0 54%, 0 39%);
+  }
+}
+@keyframes openChop {
+  100% {
+    -webkit-clip-path: polygon(50% 0%, 100% 37%, 100% 54%, 51% 63%, 0 54%, 0 39%);
+    clip-path: polygon(50% 0%, 100% 38%, 100% 54%, 51% 63%, 0 54%, 0 39%);
+  }
+}
+@-webkit-keyframes smallChop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: translateY(0);
+    /* IE 9 */
+    -webkit-transform: translateY(0);
+    /* Safari */
+  }
+}
+@keyframes smallChop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: translateY(0);
+    /* IE 9 */
+    -webkit-transform: translateY(0);
+    /* Safari */
   }
 }
