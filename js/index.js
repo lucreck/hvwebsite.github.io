@@ -7,5 +7,5 @@ $(document).ready(function(){
   
     setTimeout(function(){
       $(".chop div").addClass("animation");
-    }, 3000);
+    }, 2500);
 });
