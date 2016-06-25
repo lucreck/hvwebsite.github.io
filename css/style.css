@@ -26,8 +26,8 @@ body {
   height: 100%;
   background: #546E7A;
   position: relative;
-  -webkit-animation: intro 2s 1s forwards;
-          animation: intro 2s 1s forwards;
+  -webkit-animation: intro 1s 1s forwards;
+          animation: intro 1s 1s forwards;
 }
 
 .about {
@@ -54,11 +54,15 @@ body {
           animation: part .2s 2s forwards;
 }
 
-.character > div.chop {
+.character > .chop {
   position: absolute;
   opacity: 0;
-  -webkit-animation: part 1s 2s forwards, openChop 1s 3s forwards;
-          animation: part 1s 2s forwards, openChop 1s 3s forwards;
+  -webkit-animation: part 1s 2s forwards;
+          animation: part 1s 2s forwards;
+}
+
+.chop div {
+  transtion: all 0.5s;
 }
 
 .character > .eyesleft, .character > .eyesright {
@@ -67,13 +71,10 @@ body {
 }
 
 .smallchop {
-  opacity: 0;
   -ms-transform: translateY(12px);
   /* IE 9 */
   -webkit-transform: translateY(12px);
   /* Safari */
-  -webkit-animation: smallChop 1s 3s forwards;
-          animation: smallChop 1s 3s forwards;
 }
 
 .body {
@@ -90,31 +91,40 @@ body {
 .chop {
   width: 100%;
   height: 100%;
-  -webkit-clip-path: polygon(50% 20%, 100% 38%, 100% 54%, 51% 83%, 0 54%, 0 39%);
-  clip-path: polygon(50% 20%, 100% 38%, 100% 54%, 51% 83%, 0 54%, 0 39%);
-  background: #455a64;
-  background: -webkit-gradient(left top, right top, color-stop(0%, #455a64), color-stop(49%, #455a64), color-stop(50%, #546e7a), color-stop(100%, #546e7a));
-  background: -webkit-linear-gradient(left, #455a64 0%, #455a64 49%, #546e7a 50%, #546e7a 100%);
-  background: linear-gradient(to right, #455a64 0%, #455a64 49%, #546e7a 50%, #546e7a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#455a64', endColorstr='#546e7a', GradientType=1 );
-  -webkit-animation: part 1s 2s forwards, openChop 1s 3s forwards;
-          animation: part 1s 2s forwards, openChop 1s 3s forwards;
+}
+.chop .trapezium-right, .chop .trapezium-left {
+  width: 27px;
+  position: absolute;
+  top: 38px;
+}
+.chop .trapezium-left {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  right: -11px;
+  border-left: 30px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 75px solid #546E7A;
+}
+.chop .trapezium-right {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  left: -11px;
+  border-left: 40px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 75px solid #455A64;
 }
 
 .chopduoi {
-  width: 100%;
-  height: 100%;
-  background: #263238;
-  -webkit-clip-path: polygon(50% 82%, 0 55%, 100% 55%);
-  clip-path: polygon(50% 82%, 0 55%, 100% 55%);
+  width: 0;
+  height: 0;
+  top: 85px;
+  border-top: 40px solid #263238;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
 }
 
 .scraft {
-  width: 100%;
-  height: 100%;
-  background: #D32F2F;
-  -webkit-clip-path: polygon(1% 84%, 8% 75%, 23% 81%, 38% 84%, 56% 85%, 69% 85%, 83% 83%, 92% 77%, 98% 75%, 99% 88%, 94% 95%, 74% 98%, 57% 100%, 42% 100%, 25% 100%, 14% 98%, 5% 94%);
-  clip-path: polygon(1% 84%, 8% 75%, 23% 81%, 38% 84%, 56% 85%, 69% 85%, 83% 83%, 92% 77%, 98% 75%, 99% 88%, 94% 95%, 74% 98%, 57% 100%, 42% 100%, 25% 100%, 14% 98%, 5% 94%);
+  bottom: -5px;
 }
 
 .smallchop {
@@ -126,37 +136,38 @@ body {
   top: 20px;
 }
 
-.smallchop:nth-child(1) {
+.smallchop:nth-child(3) {
   left: 10px;
   height: 20px;
   top: 55px;
+  z-index: 100000px;
 }
 
-.smallchop:nth-child(2) {
+.smallchop:nth-child(4) {
   left: 30px;
   height: 30px;
   top: 45px;
 }
 
-.smallchop:nth-child(3) {
+.smallchop:nth-child(5) {
   left: 50px;
   height: 40px;
   top: 35px;
 }
 
-.smallchop:nth-child(5) {
+.smallchop:nth-child(7) {
   left: 90px;
   height: 40px;
   top: 35px;
 }
 
-.smallchop:nth-child(6) {
+.smallchop:nth-child(8) {
   left: 110px;
   height: 30px;
   top: 45px;
 }
 
-.smallchop:nth-child(7) {
+.smallchop:nth-child(9) {
   left: 130px;
   height: 20px;
   top: 55px;
@@ -238,24 +249,8 @@ body {
     opacity: 1;
   }
 }
-@-webkit-keyframes openChop {
-  100% {
-    -webkit-clip-path: polygon(50% 0%, 100% 37%, 100% 54%, 51% 63%, 0 54%, 0 39%);
-    clip-path: polygon(50% 0%, 100% 38%, 100% 54%, 51% 63%, 0 54%, 0 39%);
-  }
-}
-@keyframes openChop {
-  100% {
-    -webkit-clip-path: polygon(50% 0%, 100% 37%, 100% 54%, 51% 63%, 0 54%, 0 39%);
-    clip-path: polygon(50% 0%, 100% 38%, 100% 54%, 51% 63%, 0 54%, 0 39%);
-  }
-}
 @-webkit-keyframes smallChop {
-  0% {
-    opacity: 1;
-  }
   100% {
-    opacity: 1;
     -ms-transform: translateY(0);
     /* IE 9 */
     -webkit-transform: translateY(0);
@@ -263,14 +258,58 @@ body {
   }
 }
 @keyframes smallChop {
-  0% {
-    opacity: 1;
-  }
   100% {
-    opacity: 1;
     -ms-transform: translateY(0);
     /* IE 9 */
     -webkit-transform: translateY(0);
     /* Safari */
+  }
+}
+.animation.trapezium-left {
+  -webkit-animation: openChopLeft 0.5s forwards;
+          animation: openChopLeft 0.5s forwards;
+}
+
+.animation.trapezium-right {
+  -webkit-animation: openChopRight 0.5s forwards;
+          animation: openChopRight 0.5s forwards;
+}
+
+.animation.smallchop {
+  -webkit-animation: smallChop .5s forwards;
+          animation: smallChop .5s forwards;
+}
+
+@-webkit-keyframes openChopLeft {
+  100% {
+    right: -13px;
+    top: 15px;
+    border-left: 56px solid transparent;
+    border-right: 20px solid transparent;
+  }
+}
+
+@keyframes openChopLeft {
+  100% {
+    right: -13px;
+    top: 15px;
+    border-left: 56px solid transparent;
+    border-right: 20px solid transparent;
+  }
+}
+@-webkit-keyframes openChopRight {
+  100% {
+    left: -13px;
+    top: 15px;
+    border-left: 20px solid transparent;
+    border-right: 56px solid transparent;
+  }
+}
+@keyframes openChopRight {
+  100% {
+    left: -13px;
+    top: 15px;
+    border-left: 20px solid transparent;
+    border-right: 56px solid transparent;
   }
 }

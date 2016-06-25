@@ -8,6 +8,17 @@ $light-eyes-color: #FFFF8D;
 $stoke-color: #fff;
 $scraft-color: #D32F2F;
 $text-color: #455A64;
+
+$spaceT: 15px;
+$spaceLR: -13px;
+$top: 56px;
+$bottom: 20px;
+
+$spaceT0: 38px;
+$spaceLR0: -11px;
+$top0: 30px;
+$bottom0: 40px;
+
 html,
 body {
   height: 100%;
@@ -26,7 +37,7 @@ body {
   height: 100%;
   background: $primary-color;
   position: relative;
-  animation: intro 2s 1s forwards;
+  animation: intro 1s 1s forwards;
 }
 .about{
   position: absolute;
@@ -51,68 +62,72 @@ body {
   animation: part .2s 2s forwards;
 }
 
-.character > div.chop {
+.character > .chop {
   position: absolute;
   opacity: 0;
-  animation: part 1s 2s forwards, openChop 1s 3s forwards;
+  animation: part 1s 2s forwards;
 }
-
+.chop div{
+  transtion: all 0.5s;
+}
 .character > .eyesleft, .character > .eyesright{
     animation: part 1s 4s forwards, eyes 1s 4s linear infinite alternate;
 };
 .smallchop{
-  opacity: 0;
   -ms-transform: translateY(12px); /* IE 9 */
   -webkit-transform: translateY(12px); /* Safari */
-  animation: smallChop 1s 3s forwards;
 }
 .body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background: rgba(84,110,122,1);
-background: -moz-linear-gradient(left, rgba(84,110,122,1) 0%, rgba(84,110,122,1) 49%, rgba(96,125,139,1) 50%, rgba(84,110,122,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(84,110,122,1)), color-stop(49%, rgba(84,110,122,1)), color-stop(50%, rgba(96,125,139,1)), color-stop(100%, rgba(84,110,122,1)));
-background: -webkit-linear-gradient(left, rgba(84,110,122,1) 0%, rgba(84,110,122,1) 49%, rgba(96,125,139,1) 50%, rgba(84,110,122,1) 100%);
-background: -o-linear-gradient(left, rgba(84,110,122,1) 0%, rgba(84,110,122,1) 49%, rgba(96,125,139,1) 50%, rgba(84,110,122,1) 100%);
-background: -ms-linear-gradient(left, rgba(84,110,122,1) 0%, rgba(84,110,122,1) 49%, rgba(96,125,139,1) 50%, rgba(84,110,122,1) 100%);
-background: linear-gradient(to right, rgba(84,110,122,1) 0%, rgba(84,110,122,1) 49%, rgba(96,125,139,1) 50%, rgba(84,110,122,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#546e7a', endColorstr='#546e7a', GradientType=1 );
+  background: -moz-linear-gradient(left, rgba(84,110,122,1) 0%, rgba(84,110,122,1) 49%, rgba(96,125,139,1) 50%, rgba(84,110,122,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(84,110,122,1)), color-stop(49%, rgba(84,110,122,1)), color-stop(50%, rgba(96,125,139,1)), color-stop(100%, rgba(84,110,122,1)));
+  background: -webkit-linear-gradient(left, rgba(84,110,122,1) 0%, rgba(84,110,122,1) 49%, rgba(96,125,139,1) 50%, rgba(84,110,122,1) 100%);
+  background: -o-linear-gradient(left, rgba(84,110,122,1) 0%, rgba(84,110,122,1) 49%, rgba(96,125,139,1) 50%, rgba(84,110,122,1) 100%);
+  background: -ms-linear-gradient(left, rgba(84,110,122,1) 0%, rgba(84,110,122,1) 49%, rgba(96,125,139,1) 50%, rgba(84,110,122,1) 100%);
+  background: linear-gradient(to right, rgba(84,110,122,1) 0%, rgba(84,110,122,1) 49%, rgba(96,125,139,1) 50%, rgba(84,110,122,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#546e7a', endColorstr='#546e7a', GradientType=1 );
 }
 
 .chop {
   width: 100%;
   height: 100%;
-     -webkit-clip-path: polygon(50% 20%, 100% 38%, 100% 54%, 51% 83%, 0 54%, 0 39%);
-      clip-path: polygon(50% 20%, 100% 38%, 100% 54%, 51% 83%, 0 54%, 0 39%);
-  // -webkit-clip-path: polygon(50% 0%, 100% 37%, 100% 54%, 51% 63%, 0 54%, 0 39%);
-  // clip-path: polygon(50% 0%, 100% 38%, 100% 54%, 51% 63%, 0 54%, 0 39%);
-  background: rgba(69,90,100,1);
-background: -moz-linear-gradient(left, rgba(69,90,100,1) 0%, rgba(69,90,100,1) 49%, rgba(84,110,122,1) 50%, rgba(84,110,122,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(69,90,100,1)), color-stop(49%, rgba(69,90,100,1)), color-stop(50%, rgba(84,110,122,1)), color-stop(100%, rgba(84,110,122,1)));
-background: -webkit-linear-gradient(left, rgba(69,90,100,1) 0%, rgba(69,90,100,1) 49%, rgba(84,110,122,1) 50%, rgba(84,110,122,1) 100%);
-background: -o-linear-gradient(left, rgba(69,90,100,1) 0%, rgba(69,90,100,1) 49%, rgba(84,110,122,1) 50%, rgba(84,110,122,1) 100%);
-background: -ms-linear-gradient(left, rgba(69,90,100,1) 0%, rgba(69,90,100,1) 49%, rgba(84,110,122,1) 50%, rgba(84,110,122,1) 100%);
-background: linear-gradient(to right, rgba(69,90,100,1) 0%, rgba(69,90,100,1) 49%, rgba(84,110,122,1) 50%, rgba(84,110,122,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#455a64', endColorstr='#546e7a', GradientType=1 );
-animation: part 1s 2s forwards,
-  openChop 1s 3s forwards;
+    .trapezium-right, .trapezium-left{
+      width: 27px;
+      position: absolute;
+      top: $spaceT0;
+    }
+
+    .trapezium-left{
+      transform: rotate(90deg);
+      right: $spaceLR0;
+      border-left: $top0 solid transparent;
+      border-right: $bottom0 solid transparent;
+      border-bottom: 75px solid $primary-color;
+    }
+
+    .trapezium-right{
+      transform: rotate(-90deg);
+      left: $spaceLR0;
+      border-left: $bottom0 solid transparent;
+      border-right: $top0 solid transparent;
+      border-bottom: 75px solid $chop-color;
+    }
 }
 
 .chopduoi {
-  width: 100%;
-  height: 100%;
-  background: $dark-chop-color;
-  -webkit-clip-path: polygon(50% 82%, 0 55%, 100% 55%);
-  clip-path: polygon(50% 82%, 0 55%, 100% 55%);
+    width: 0;
+    height: 0;
+    top: 85px;
+    border-top: 40px solid $dark-chop-color;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
 }
 
 .scraft {
-	width: 100%;
-	height: 100%;
-	background: $scraft-color;
-	-webkit-clip-path: polygon(1% 84%, 8% 75%, 23% 81%, 38% 84%, 56% 85%, 69% 85%, 83% 83%, 92% 77%, 98% 75%, 99% 88%, 94% 95%, 74% 98%, 57% 100%, 42% 100%, 25% 100%, 14% 98%, 5% 94%);
-clip-path: polygon(1% 84%, 8% 75%, 23% 81%, 38% 84%, 56% 85%, 69% 85%, 83% 83%, 92% 77%, 98% 75%, 99% 88%, 94% 95%, 74% 98%, 57% 100%, 42% 100%, 25% 100%, 14% 98%, 5% 94%);
+  bottom: -5px;
 }
 
 .smallchop {
@@ -124,39 +139,40 @@ clip-path: polygon(1% 84%, 8% 75%, 23% 81%, 38% 84%, 56% 85%, 69% 85%, 83% 83%, 
   top: 20px;
 }
 
-.smallchop:nth-child(1) {
+.smallchop:nth-child(3) {
   left: 10px;
   height: 20px;
   top: 55px;
+  z-index: 100000px;
 }
 
-.smallchop:nth-child(2) {
+.smallchop:nth-child(4) {
   left: 30px;
   height: 30px;
   top: 45px;
 }
 
-.smallchop:nth-child(3) {
+.smallchop:nth-child(5) {
   left: 50px;
   height: 40px;
   top: 35px;
 }
-.smallchop:nth-child(4){
+.smallchop:nth-child(6){
 }
 
-.smallchop:nth-child(5) {
+.smallchop:nth-child(7) {
   left: 90px;
   height: 40px;
   top: 35px;
 }
 
-.smallchop:nth-child(6) {
+.smallchop:nth-child(8) {
   left: 110px;
   height: 30px;
   top: 45px;
 }
 
-.smallchop:nth-child(7) {
+.smallchop:nth-child(9) {
   left: 130px;
   height: 20px;
   top: 55px;
@@ -217,19 +233,44 @@ clip-path: polygon(1% 84%, 8% 75%, 23% 81%, 38% 84%, 56% 85%, 69% 85%, 83% 83%, 
 
 @keyframes openChop{
   100%{
-  -webkit-clip-path: polygon(50% 0%, 100% 37%, 100% 54%, 51% 63%, 0 54%, 0 39%);
-  clip-path: polygon(50% 0%, 100% 38%, 100% 54%, 51% 63%, 0 54%, 0 39%);
+    $spaceT: 0px;
   }
 }
 
 @keyframes smallChop{
-  0%{
-    opacity: 1;
-  }
   100%{
-    opacity: 1;
      -ms-transform: translateY(0); /* IE 9 */
   -webkit-transform: translateY(0); /* Safari */
   }
 }
+
+.animation.trapezium-left{
+  animation: openChopLeft 0.5s forwards;
+}
+
+.animation.trapezium-right{
+  animation: openChopRight 0.5s forwards;
+}
+.animation.smallchop{
+    animation: smallChop .5s forwards;
+}
+      
+@keyframes openChopLeft{
+  100%{
+      right: $spaceLR;
+      top: $spaceT;
+      border-left: $top solid transparent;
+      border-right: $bottom solid transparent;
+  }
+}
+@keyframes openChopRight{
+  100%{
+      left: $spaceLR;
+      top: $spaceT;
+      border-left: $bottom solid transparent;
+      border-right: $top solid transparent;
+  }
+}
+
+
 
