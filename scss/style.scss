@@ -8,6 +8,7 @@ $light-eyes-color: #FFFF8D;
 $stoke-color: #fff;
 $scraft-color: #D32F2F;
 $text-color: #455A64;
+$medium-size: 26px;
 
 $spaceT: 15px;
 $spaceLR: -13px;
@@ -26,24 +27,29 @@ body {
   font-family: 'Amatic SC', cursive;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+.slide{
+  height: 400px;
 }
-
 .character {
   width: 100%;
   height: 100%;
   background: $primary-color;
   position: relative;
   animation: intro 1s 1s forwards;
+  transition: all 10s;
 }
 .about{
   position: absolute;
   top: calc(50% + 100px);
   left: calc(50% - 130px);
   text-align: center;
+  opacity: 0;
+  animation: part 1s 4s forwards;
 }  
 
 .about h1, h2{
@@ -272,5 +278,55 @@ body {
   }
 }
 
+.row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu{
+  margin-top: 40px;
+}
+
+.menu li{
+  float: right;
+  margin-right: 50px;
+  padding: 2px 0;
+  font-size: $medium-size;
+  position: relative;
+}
+.menu li a{
+  color: $primary-color;
+  text-decoration: none;
+  transition: all .3s;
+}
+.menu li a:hover{
+  color: white;
+}
+
+.menu li >a:hover:before{
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.menu li a:before{
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: $chop-color;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .25s linear;
+}
+
+.menu li:first-child{
+  margin-right: 0;
+}
 
 

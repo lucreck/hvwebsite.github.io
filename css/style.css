@@ -6,19 +6,8 @@ body {
   font-family: 'Amatic SC', cursive;
 }
 
-body {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+.slide {
+  height: 400px;
 }
 
 .character {
@@ -28,6 +17,8 @@ body {
   position: relative;
   -webkit-animation: intro 1s 1s forwards;
           animation: intro 1s 1s forwards;
+  -webkit-transition: all 10s;
+  transition: all 10s;
 }
 
 .about {
@@ -35,6 +26,9 @@ body {
   top: calc(50% + 100px);
   left: calc(50% - 130px);
   text-align: center;
+  opacity: 0;
+  -webkit-animation: part 1s 4s forwards;
+          animation: part 1s 4s forwards;
 }
 
 .about h1, h2 {
@@ -312,4 +306,69 @@ body {
     border-left: 20px solid transparent;
     border-right: 56px solid transparent;
   }
+}
+.row {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu {
+  margin-top: 40px;
+}
+
+.menu li {
+  float: right;
+  margin-right: 50px;
+  padding: 2px 0;
+  font-size: 26px;
+  position: relative;
+}
+
+.menu li a {
+  color: #546E7A;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.menu li a:hover {
+  color: white;
+}
+
+.menu li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.menu li a:before {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: #455A64;
+  visibility: hidden;
+  border-radius: 5px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: .25s linear;
+  transition: .25s linear;
+}
+
+.menu li:first-child {
+  margin-right: 0;
 }
