@@ -1,50 +1,5 @@
+@import "variables";
 @import url(https://fonts.googleapis.com/css?family=Kreon:400,700);
-
-
-$color-main: #2eb398;
-
-$bg-color-main: $color-main;
-$bg-color-black: #343434;
-$bg-color-white: #fff;
-
-$input-color-gray: #464646;
-
-$button-color-main: $bg-color-main;
-
-$text-color-white: $bg-color-white;
-$text-color-black-50: #999999;
-
-$text-color-green-main-50: #57E0C4;
-
-$border-color-main-150: #248E78;
-
-%font-family-kreon
-  font-family: 'Kreon', serif;
-
-%no-border-radius
-  border-radius: 0px !important;
-%no-border
-  border: none;
-%no-margin
-  margin: 0px;
-%no-padding
-  padding: 0px;
-%block-pseudo
-  content: '';
-  display: block;
-  position: absolute;
-%ul-no-style
-  list-style: none;
-
-@mixin socical($i)
-    @if ($i == 1)
-        background: #3660A0;
-    @else if ($i == 2)
-        background: #DD5644;
-    @else if ($i == 3)
-        background: $bg-color-black;
-
-
 *
   transition: all .5s;
 
@@ -92,8 +47,10 @@ body
       padding-top: 80px;
       .item
         text-align: center;
-        img
-          max-height: 500px;
+
+.center-block
+  display: inline-block;
+
 
 .about
     margin-top: 50px;
@@ -124,6 +81,8 @@ body
            @for $i from 1 to 4
               .btn:nth-child(#{$i})
                   @include socical($i);
+        .box
+          width: 220px;
 .contact
   padding: 65px 0px;
   background: $bg-color-black;
@@ -191,3 +150,34 @@ h2, h3, h4
   border: solid 1px $border-color-main-150;
   &:hover, &:focus
     color: $text-color-white;
+
+
+.box
+  width: $box-width;
+  height: $box-height;
+  position: relative;
+  margin-right: 20px;
+  float: left;
+  .hexagon
+    background: red;
+    overflow: hidden;
+    visibility: hidden;
+    transform: rotate(-60deg) skewY(30deg);
+    float: left;
+    position: relative;
+    list-style-type: none;
+    width: 100%;
+    padding-bottom: 116%;
+    *
+      visibility: visible;
+    div
+      height: 100%;
+      width: 100%;
+      background: black;
+      position: absolute;
+      -webkit-transform: skewY(-30deg) rotate(60deg);
+      -ms-transform: skewY(-30deg) rotate(60deg);
+      transform: skewY(-30deg) rotate(60deg);
+      img
+        width: 100%;
+        height: auto;

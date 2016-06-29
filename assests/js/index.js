@@ -14,12 +14,12 @@ $(function() {
 });
 
 
-$('.back-to-top').hide();
+$('.back-to-top').css("opacity", 0);
 window.onscroll = function() {checkOutTop()};
 function checkOutTop() {
     if (document.body.scrollTop > 150) {
-        $('.back-to-top').show();
+        $('.back-to-top').css("opacity", 1);
     } else {
-        $('.back-to-top').hide();
+        $('.back-to-top').css("opacity", 0);
     }
 }

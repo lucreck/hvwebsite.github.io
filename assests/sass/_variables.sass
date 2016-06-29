@@ -1,0 +1,48 @@
+
+
+
+$color-main: #2eb398;
+
+$bg-color-main: $color-main;
+$bg-color-black: #343434;
+$bg-color-white: #fff;
+
+$input-color-gray: #464646;
+
+$button-color-main: $bg-color-main;
+
+$text-color-white: $bg-color-white;
+$text-color-black-50: #999999;
+
+$text-color-green-main-50: #57E0C4;
+
+$border-color-main-150: #248E78;
+
+$box-height: 186px;
+$box-width: 160px;
+
+%font-family-kreon
+  font-family: 'Kreon', serif;
+
+%no-border-radius
+  border-radius: 0px !important;
+%no-border
+  border: none;
+%no-margin
+  margin: 0px;
+%no-padding
+  padding: 0px;
+%block-pseudo
+  content: '';
+  display: block;
+  position: absolute;
+%ul-no-style
+  list-style: none;
+
+@mixin socical($i)
+    @if ($i == 1)
+        background: #3660A0;
+    @else if ($i == 2)
+        background: #DD5644;
+    @else if ($i == 3)
+        background: $bg-color-black;
