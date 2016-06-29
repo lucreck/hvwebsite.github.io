@@ -1,78 +1,153 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>Dark knight (Learning)</title>
-    
-    
-    <link rel="stylesheet" href="css/reset.css">
+<html>
 
-    
-        <link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Loi Pham</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assests/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assests/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assests/css/style.min.css">
+</head>
 
-    
-    
-    
-  </head>
+<body>
+  <div class="container-fluid" id="top">
+    <div class="row bar">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="#">Brand</a> -->
+          </div>
+          <div class="navbar-collapse collapse" id="bs-navbar-collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+              <li><a href="#top">potfolio</a></li>
+              <li><a href="#about">about</a></li>
+              <li>
+                <a href="" class="hidden-xs">
+                  <svg version="1.1" id="logo-menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  	 width="69.16px" height="56.22px" viewBox="0 0 69.16 56.22" enable-background="new 0 0 69.16 56.22" xml:space="preserve">
+                  <polygon fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="1.106,0.845 34.58,55.266 68.053,0.845 34.58,10.634 "/>
+                  </svg>
+                </a>
+              </li>
+              <li><a href="#slide">blog</a></li>
+              <li><a href="#contact">get in touch</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="row slide" id="slide">
+      <div class="container">
+        <ul class="slide-frame">
+          <li class="item">
+            <img src="assests/img/slider.jpg" alt="">
+          </li>
+        </ul>
+        <nav>
+          <ul class="pager">
+            <li>
+              <a href="#"></a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row about" id="about">
+      <div class="container">
+        <div class="content">
+          <div class="col-md-3">
+            <img src="assests/img/slider.jpg" alt="" class="avatar_img">
+          </div>
+          <div class="col-md-9">
+            <h2>Loi Pham</h2>
+            <h4>Front-end web developer</h4>
+            <p>
+              Hi! I'm a front-end web developer, my name is Loi.
+               I'm from Vietnam. I'm 23 years old.
+               I like to create various websites because I think that it's not just programming,
+               it's a fascinating journey from the preparation and setting up IDE to putting some
+                results on Codepen or hosting. Any programmer likes to write code with music and I am not
+                an exception.
+               I want to devote my life to programming because I love this thing.
+            </p>
+            <div class="row">
+              <div class="socical">
+                <div class="btn-group pull-right" role="group" aria-label="...">
+                  <a target="_blank" class="btn btn-default">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a target="_blank" class="btn btn-default">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                  </a>
+                  <a target="_blank" class="btn btn-default" href="http://codepen.io/loipt/">
+                    <i class="fa fa-codepen" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row contact" id="contact">
+      <div class="container">
+        <div class="content col-md-12">
+          <div class="col-md-8">
+            <h3>Get In Touch</h3>
+            <p>In order to get in touch use the contact form below:</p>
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" id="" placeholder="Name (Required)">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="" placeholder="Email (Required)">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea type="text" class="form-control" id="" rows="10"></textarea>
+              </div>
+              <button type="submit" class="btn btn-default pull-right">Submit</button>
+            </form>
 
-  <body>
-
-    <div class="row">
-  <ul class="menu">
-    <li><a href="">Contact</a></li>
-    <li><a href="">Project</a></li>
-    <li><a href="">Technologies</a></li>
-    <li><a href="">Education</a></li>
-    <li><a href="">About</a></li>
-  </ul>
-</div>
-<div class="row slide">
-  <div class="character">
-  <div class="body part"></div>
-  <div class="chopduoi"></div>
-  <div class="earleft"></div>
-  <div class="earright"></div>
-  <div class="eyesleft"></div>
-  <div class="eyesright"></div>
-  <div class="chop">
-    <div class="trapezium-left"></div>
-    <div class="trapezium-right"></div>
-    <div class="smallchop"></div>
-    <div class="smallchop"></div>
-    <div class="smallchop"></div>
-    <div class="smallchop"></div>
-    <div class="smallchop"></div>
-    <div class="smallchop"></div>
-    <div class="smallchop"></div>
+          </div>
+          <div class="col-md-4">
+            <p><span>About this website:</span>
+              Almost I'm not a web designer and also not a rich guy. So, I chose a "Hexa a Flat Portfolio Bootstrap
+              Responsive Web Template" to build the website by myself. The Bootstrap and Sass was used for doing this. <a href=""></a>
+            </p>
+            <p><i class="fa fa-map-marker"></i>&nbsp;&nbsp;  11/16 Nguyen Khanh Toan, Cau Giay, Ha Noi</p>
+            <p><i class="fa fa-phone"></i>&nbsp;  (+84) 973.486.058</p>
+            <p><i class="fa fa-envelope"></i> phamtheloi(at)gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row footer">
+      <div class="copy text-center">
+				<p class="link"><span>© 2014 Hexa . All rights reserved | Template by&nbsp;<a href="https://w3layouts.com/preview/?d=web&l=/hexa-flat-portfolio-bootstrap-responsive-web-template/"> W3Layouts</a></span></p>
+				<a href="#home" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"> </span></a>
+			</div>
+    </div>
   </div>
+  <a class="back-to-top" href="#top">
+      <span class="glyphicon glyphicon-arrow-up"></span>
+  </a>
+  <script src="assests/js/jquery-2.1.1.min.js"></script>
+  <script src="assests/js/bootstrap.min.js"></script>
+  <script src="assests/js/index.js"></script>
+</body>
 
-  <div class="scraft">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         width="171.5px" height="66.25px" viewBox="0 0 171.5 66.25" enable-background="new 0 0 171.5 66.25" xml:space="preserve">
-      <polyline fill="#ED1C24" points="2,39.888 13,28.5 17,28.5 22,31.75 29.5,34.194 37.75,37 54.5,39.888 107,41.5 123.75,38.5 
-        137,30.5 139.75,28.5 139.75,30 147.75,46 141,53.25 140.5,56.25 130.25,58.5 110,61.5 88,64.75 35.5,64.75 18.75,60.25 8.25,55 
-        2,41 "/>
-      <polyline fill="#ED1C24" points="139.75,28.5 139.75,15.75 142.75,9 154.5,3 161.5,0 163.25,13 153.25,20.5 147.75,25.5 139.75,30 
-        140.4,32.55 "/>
-      <polyline fill="#ED1C24" points="139.469,29.125 153.906,27.75 163.25,30.333 168.667,34.167 161.667,37 152.667,37 "/>
-      </svg>
-  </div>
-</div>
-    <div class="about">
-    <h1>Dark knight</h1>
-    <h2>front-end web developer</h2>
-  </div>
-</div>
-<div class="row">
-
-</div>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-
-        <script src="js/index.js"></script>
-
-    
-    
-    
-  </body>
 </html>

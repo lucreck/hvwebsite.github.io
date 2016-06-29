@@ -1,0 +1,193 @@
+@import url(https://fonts.googleapis.com/css?family=Kreon:400,700);
+
+
+$color-main: #2eb398;
+
+$bg-color-main: $color-main;
+$bg-color-black: #343434;
+$bg-color-white: #fff;
+
+$input-color-gray: #464646;
+
+$button-color-main: $bg-color-main;
+
+$text-color-white: $bg-color-white;
+$text-color-black-50: #999999;
+
+$text-color-green-main-50: #57E0C4;
+
+$border-color-main-150: #248E78;
+
+%font-family-kreon
+  font-family: 'Kreon', serif;
+
+%no-border-radius
+  border-radius: 0px !important;
+%no-border
+  border: none;
+%no-margin
+  margin: 0px;
+%no-padding
+  padding: 0px;
+%block-pseudo
+  content: '';
+  display: block;
+  position: absolute;
+%ul-no-style
+  list-style: none;
+
+@mixin socical($i)
+    @if ($i == 1)
+        background: #3660A0;
+    @else if ($i == 2)
+        background: #DD5644;
+    @else if ($i == 3)
+        background: $bg-color-black;
+
+
+*
+  transition: all .5s;
+
+body
+  background-color: $bg-color-white;
+
+.bar
+    background-color: $bg-color-black;
+    .navbar
+      @extend %no-border-radius
+      @extend %no-border
+      @extend %no-margin
+      padding: 15px;
+      background-color: $bg-color-black;
+      li:nth-child(3)
+        width: 100px;
+        &::before
+            @extend %block-pseudo
+            height: 0px;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 50px solid $bg-color-black;
+            width: 0px;
+            top: 60px;
+      a
+        text-transform: uppercase;
+        color: $text-color-white !important;
+      a:hover
+        color: $bg-color-main !important;
+        transition: all .5s;
+
+
+    .navbar .navbar-nav
+        display: inline-block;
+        float: none;
+
+    .navbar .navbar-collapse
+          text-align: center;
+
+.slide
+    .slide-frame
+      @extend %no-padding
+      @extend %ul-no-style
+      width: 100%;
+      padding-top: 80px;
+      .item
+        text-align: center;
+        img
+          max-height: 500px;
+
+.about
+    margin-top: 50px;
+    padding: 50px 0px;
+    background-color: $bg-color-main;
+    .container
+        padding: 0px 15px;
+        .content
+           color: $bg-color-white;
+           padding: 15px;
+           border-left: solid 1px $border-color-main-150;
+           border-right: solid 1px $border-color-main-150;
+           h2
+             font-size: 28px;
+           h4
+             color: $text-color-green-main-50;
+           .avatar_img
+             width: 100%;
+           .socical
+             .btn
+               @extend %no-border;
+               @extend %no-border-radius;
+               height: 52px;
+               width: 52px;
+               line-height: 38px;
+               font-size: 26px;
+               color: #fff;
+           @for $i from 1 to 4
+              .btn:nth-child(#{$i})
+                  @include socical($i);
+.contact
+  padding: 65px 0px;
+  background: $bg-color-black;
+  input, textarea
+    @extend %no-border-radius
+    background-color: $input-color-gray;
+    border: 1px solid #303030;
+    color: $text-color-black-50;
+    line-height: 25px !important;
+    height: auto;
+  input:hover, input:focus, textarea:hover, textarea:focus
+    border-color: $color-main;
+  .col-md-8
+    h3
+      color: $text-color-white;
+    p
+      color: $text-color-black-50;
+    button
+      background-color: $color-main;
+      color: $text-color-white;
+      @extend %no-border-radius
+      @extend %no-border
+      height: 50px;
+      width: 120px;
+  .col-md-4
+      color: $text-color-white;
+      p
+        color: $text-color-white;
+        font-weight: 600;
+      p:nth-child(1)
+        margin-top: 80px;
+        color: #c9c9c9;
+        font-weight: 500;
+      span
+        color: $text-color-white;
+        font-weight: 600;
+      .fa
+        color: $color-main;
+        font-size: 20px;
+
+.footer
+  background-color: #0e0e0e;
+  padding: 25px 0;
+
+h2, h3, h4
+  @extend %font-family-kreon
+
+#logo-menu
+  position: absolute;
+  left: 16px;
+
+.back-to-top
+  height: 50px;
+  width: 50px;
+  background-color: $bg-color-main;
+  color: $text-color-white;
+  position: fixed;
+  z-index: 1000;
+  bottom: 50px;
+  right: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  text-align: center;
+  padding: 3px 10px 0 7px;
+  border: solid 1px $border-color-main-150;
+  &:hover, &:focus
+    color: $text-color-white;
