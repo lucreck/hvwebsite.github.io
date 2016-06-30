@@ -1,0 +1,15 @@
+
+
+@mixin animation-hexagon($time, $duration)
+  animation: hexagon-grid-start $time $duration forwards;
+
+@keyframes hexagon-grid-start
+    0%
+      opacity: 0;
+    100%
+      opacity: 1;
+
+@for $i from 1 through 3
+  @for $j from 1 through 5
+    .slide-frame li:nth-child(#{$i}) .box:nth-child(#{$j})
+      @include animation-hexagon(random(5) + s, 0s)

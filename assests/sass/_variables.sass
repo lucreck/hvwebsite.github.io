@@ -1,4 +1,7 @@
-
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
 
 
 $color-main: #2eb398;
@@ -46,3 +49,23 @@ $box-width: 160px;
         background: #DD5644;
     @else if ($i == 3)
         background: $bg-color-black;
+
+@mixin transform($transforms, $transform2)
+  transform: $transforms $transform2;
+  -moz-transform: $transforms $transform2;
+  -o-transform: $transforms $transform2;
+  -ms-transform: $transforms $transform2;
+  -webkit-transform: $transforms $transform2;
+
+@mixin skew-rotate($x, $y)
+     @include transform(skewY(#{$x}deg), rotate(#{$y}deg));
+
+@mixin rotate-skew($x, $y)
+     @include transform(rotate(#{$x}deg), skewY(#{$y}deg));
+
+@mixin hexagon-responsive($height, $width, $margin-top)
+    .box
+      height: $height;
+      width: $width;
+    .item:not(:nth-child(1))
+      margin-top: $margin-top !important;
